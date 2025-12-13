@@ -1,0 +1,145 @@
+/* templates.css
+   Put after your main styles.css so it overrides defaults
+*/
+
+/* Generic container rules used by all templates */
+.biodata-template .bio-border {
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover; /* default, per-template override allowed */
+  box-sizing: border-box;
+  padding: var(--bio-padding-top, 60px) var(--bio-padding-x, 40px) var(--bio-padding-bottom, 80px);
+  border-radius: var(--bio-border-radius, 12px);
+  overflow: visible;
+}
+
+/* Ensure inner content never touches decorative edges:
+   bio-inner is centered and constrained */
+.biodata-template .bio-inner {
+  max-width: var(--bio-inner-width, 85%);
+  margin: 0 auto;
+  background: transparent;
+  font-family: var(--bio-font, 'Century', serif);
+  color: var(--bio-text-color, #111);
+}
+
+/* PDF-safe defaults (when generating PDF we want full image to fit)
+   body.pdf-mode is toggled before html2canvas/jspdf capture */
+body.pdf-mode .biodata-template .bio-border {
+  background-size: contain !important;
+  background-position: center top !important;
+  padding: var(--bio-pdf-padding, 120px 60px 120px) !important;
+}
+
+/* Hide template-chip by default (user asked earlier) */
+.biodata-template .bio-template-chip { display: none !important; }
+
+/* Generic text layout (keeps text inside the inner container) */
+.biodata-template .bio-header { text-align: center; margin-bottom: 26px; }
+.biodata-template .bio-name { font-size: 28px; font-weight: 800; letter-spacing: 0.02em; }
+.biodata-template .bio-sub { font-size: 13px; color: #666; }
+
+/* Common layout rows */
+.biodata-template .bio-main { display:flex; gap: 24px; align-items:flex-start; }
+.biodata-template .bio-main-left { flex:1; }
+.biodata-template .bio-main-right { width: 150px; flex-shrink:0; }
+
+/* Keep photo boxed and not overflowing */
+.biodata-template .bio-photo { max-width: 150px; width: 100%; height: auto; display:block; object-fit:cover; border-radius:10px; }
+
+/* Make sure long text wraps normally */
+.biodata-template .bio-value { word-break: normal; white-space: normal; }
+
+/* ===========================
+   Example: Template 2 (format2.jpg)
+   - decorative border at edges, we need big inner padding
+   =========================== */
+.template-2 .bio-border {
+  background-image: url('images/format2.jpg');
+  --bio-padding-top: 110px;
+  --bio-padding-x: 48px;
+  --bio-padding-bottom: 64px;
+  background-size: contain;   /* ensure whole image visible, adjust if needed */
+  background-position: center top;
+}
+
+/* Template 3 (format3.jpg) example */
+.template-3 .bio-border {
+  background-image: url('images/format3.jpg');
+  --bio-padding-top: 90px;
+  --bio-padding-x: 44px;
+  --bio-padding-bottom: 70px;
+  background-size: contain;
+  background-position: center top;
+}
+
+/* Template 4 (dark bg) - we need light text & center photo */
+.template-4 .bio-border {
+  background-image: url('images/format4.jpg');
+  --bio-padding-top: 120px;
+  --bio-padding-x: 34px;
+  --bio-padding-bottom: 80px;
+  background-size: cover;
+  background-position: center top;
+}
+.template-4 .bio-name, .template-4 .bio-sub, .template-4 .bio-label { color: #f5df9f; }
+
+/* Template 19 (example you asked) — clean, show full image */
+.template-19 .bio-border {
+  background-image: url('images/format19.jpg');
+  --bio-padding-top: 100px;
+  --bio-padding-x: 56px;
+  --bio-padding-bottom: 120px;
+  background-size: contain;  /* contain so border visible */
+  background-position: center top;
+}
+
+/* Add other templates similarly... */
+/* Template-5 ... template-20: duplicate above block and change url + padding */
+/* =========================================================
+   TEMPLATE 12 – HINDU (GANESH JI)
+   ========================================================= */
+
+#bioPreview.hindu.template-12 .bio-border {
+  border-radius: 18px;
+  padding: 8px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow: hidden;
+}
+
+#bioPreview.hindu.template-12 .bio-inner {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 230px 56px 90px;
+  font-family: inherit;
+  color: var(--text-color);
+}
+
+/* Header */
+#bioPreview.hindu.template-12 .bio-name {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
+
+#bioPreview.hindu.template-12 .bio-section-title {
+  background: rgba(255,255,255,0.92);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* Rows */
+#bioPreview.hindu.template-12 .bio-label {
+  color: var(--label-color);
+  font-weight: 600;
+}
+
+#bioPreview.hindu.template-12 .bio-value {
+  color: var(--text-color);
+}
+
+

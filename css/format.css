@@ -1,0 +1,5611 @@
+/* =========================================================
+   FORMAT 2 – GREEN ELEGANT BORDER
+   ---------------------------------------------------------
+   - Use with: <div class="biodata-template template-2">
+   - Background image: format2.jpg (set from JS)
+   - This file only contains template-2 overrides.
+   ========================================================= */
+
+/* Outer frame: green border + background image */
+.template-2 .bio-border {
+  border: 4px solid #16a34a;
+  border-radius: 18px;
+  padding: 8px;
+  background-color: #ffffff;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow: hidden;
+}
+
+/* Safe area – yahi se text ko border se door rakhenge */
+.template-2 .bio-inner {
+  max-width: 86%;
+  margin: 0 auto;
+  padding: 48px 40px 34px;   /* top 48px so name design se door */
+}
+
+.template-2 .bio-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+
+/* -------- HEADER: Name + subtitle -------- */
+
+.template-2 .bio-name {
+  font-size: 24px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #166534;
+  font-weight: 700;
+}
+
+.template-2 .bio-sub {
+  color: #374151;
+}
+
+/* Agar kahi chip ka CSS rahe to yaha optionally neutral rakh sakte ho,
+   ya bilkul remove kar sakte ho. Agar chip nahi dikhani, to HTML se hi
+   remove kar dena (renderPreviewHtml me). */
+.template-2 .bio-template-chip {
+  display: none;
+}
+
+/* Section headings */
+.template-2 .bio-section {
+  margin-bottom: 18px;
+}
+
+.template-2 .bio-section-title {
+  display: inline-block;
+  padding: 5px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(22, 163, 74, 0.85);
+  color: #15803d;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 10px;
+}
+
+.template-2 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+
+/* -------- ROWS: labels + values -------- */
+
+.template-2 .bio-row {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+}
+
+/* Labels – green, fixed width */
+.template-2 .bio-label {
+  flex: 0 0 170px;
+  text-align: left;
+  color: #15803d;
+  font-weight: 600;
+}
+
+/* Values – dark text */
+.template-2 .bio-value {
+  flex: 1 1 auto;
+  color: #111827;
+  font-weight: 400;
+}
+
+/* -------- MAIN LAYOUT (left content + right photo) -------- */
+
+.template-2 .bio-main {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.template-2 .bio-main-left {
+  flex: 1;
+}
+
+.template-2 .bio-main-right {
+  width: 150px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 8px;
+  padding-right: 8px;   /* photo border se chipakna band hoga */
+}
+
+/* -------- FOOTER -------- */
+
+.template-2 .bio-footer {
+  margin-top: 18px;
+  font-size: 11px;
+  color: #6b7280;
+}
+
+/* =========================================================
+   RESPONSIVE TWEAKS
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  .template-2 .bio-inner {
+    max-width: 90%;
+    padding: 40px 26px 28px;
+  }
+
+  .template-2 .bio-row {
+    gap: 14px;
+  }
+
+  .template-2 .bio-label {
+    flex: 0 0 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .template-2 .bio-main {
+    flex-direction: column-reverse;
+  }
+
+  .template-2 .bio-main-right {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding-right: 0;
+  }
+
+  .template-2 .bio-inner {
+    max-width: 100%;
+    padding: 30px 16px 24px;
+  }
+}
+
+/* =========================================================
+   FORMAT 2 – GREEN ELEGANT BORDER
+   ========================================================= */
+
+.template-2 .bio-border {
+  border: 4px solid #16a34a;
+  border-radius: 18px;
+  padding: 8px;
+  background-color: #ffffff;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow: hidden;
+}
+
+/* Safe area – text border se door rahe */
+.template-2 .bio-inner {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 70px 52px 40px;      /* TOP zyada, sides bhi safe */
+}
+
+/* Header */
+.template-2 .bio-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.template-2 .bio-name {
+  font-size: 24px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #166534;
+  font-weight: 700;
+}
+
+.template-2 .bio-sub {
+  color: #374151;
+}
+
+.template-2 .bio-template-chip {
+  display: none;                /* FORMAT 2 text hide */
+}
+
+/* Section headings */
+.template-2 .bio-section {
+  margin-bottom: 18px;
+}
+
+.template-2 .bio-section-title {
+  display: inline-block;
+  padding: 5px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(22, 163, 74, 0.85);
+  color: #15803d;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 10px;
+}
+
+.template-2 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Rows */
+.template-2 .bio-row {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+}
+
+/* Labels – green */
+.template-2 .bio-label {
+  flex: 0 0 170px;
+  text-align: left;
+  color: #15803d;
+  font-weight: 600;
+}
+
+/* Values */
+.template-2 .bio-value {
+  flex: 1 1 auto;
+  color: #111827;
+  font-weight: 400;
+}
+
+/* Layout + photo */
+.template-2 .bio-main {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.template-2 .bio-main-left {
+  flex: 1;
+}
+
+.template-2 .bio-main-right {
+  width: 150px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 8px;
+  padding-right: 8px;
+}
+
+.template-2 .bio-footer {
+  margin-top: 18px;
+  font-size: 11px;
+  color: #6b7280;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .template-2 .bio-inner {
+    max-width: 90%;
+    padding: 40px 26px 28px;
+  }
+
+  .template-2 .bio-row {
+    gap: 14px;
+  }
+
+  .template-2 .bio-label {
+    flex: 0 0 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .template-2 .bio-main {
+    flex-direction: column-reverse;
+  }
+
+  .template-2 .bio-main-right {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding-right: 0;
+  }
+
+  .template-2 .bio-inner {
+    max-width: 100%;
+    padding: 30px 16px 24px;
+  }
+}
+
+
+/* =========================================================
+   FORMAT 3 – BLUE ROYAL BORDER
+   ========================================================= */
+
+.template-3 .bio-border {
+  border: 4px solid #1d4ed8;     /* blue */
+  border-radius: 18px;
+  padding: 8px;
+  background-color: #ffffff;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow: hidden;
+}
+
+/* Safe content area – desktop + mobile dono me same feel */
+.template-3 .bio-inner {
+  max-width: 80%;               /* thoda andar, border se safe */
+  margin: 0 auto;
+  padding: 68px 50px 40px;      /* top zyada -> name niche; sides safe */
+}
+
+/* Header */
+.template-3 .bio-header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.template-3 .bio-name {
+  font-size: 24px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #1d4ed8;               /* royal blue */
+  font-weight: 700;
+}
+
+.template-3 .bio-sub {
+  color: #374151;
+}
+
+/* Chip hide (FORMAT 3 text nahi chahiye) */
+.template-3 .bio-template-chip {
+  display: none;
+}
+
+/* Section headings */
+.template-3 .bio-section {
+  margin-bottom: 18px;
+}
+
+.template-3 .bio-section-title {
+  display: inline-block;
+  padding: 5px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(37, 99, 235, 0.85);
+  color: #1d4ed8;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-bottom: 10px;
+}
+
+.template-3 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Rows */
+.template-3 .bio-row {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+}
+
+/* Labels – blue */
+.template-3 .bio-label {
+  flex: 0 0 170px;
+  text-align: left;
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+/* Values */
+.template-3 .bio-value {
+  flex: 1 1 auto;
+  color: #111827;
+  font-weight: 400;
+}
+
+/* Layout + photo */
+.template-3 .bio-main {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.template-3 .bio-main-left {
+  flex: 1;
+}
+
+.template-3 .bio-main-right {
+  width: 150px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 8px;
+  padding-right: 8px;
+}
+
+/* Footer */
+.template-3 .bio-footer {
+  margin-top: 18px;
+  font-size: 11px;
+  color: #6b7280;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .template-3 .bio-inner {
+    max-width: 90%;
+    padding: 40px 26px 28px;
+  }
+
+  .template-3 .bio-row {
+    gap: 14px;
+  }
+
+  .template-3 .bio-label {
+    flex: 0 0 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .template-3 .bio-main {
+    flex-direction: column-reverse;
+  }
+
+  .template-3 .bio-main-right {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding-right: 0;
+  }
+
+  .template-3 .bio-inner {
+    max-width: 100%;
+    padding: 30px 16px 24px;
+  }
+}
+
+
+/* =========================================================
+   FORMAT 4 – TEAL & GOLD (Playfair Display)
+   ========================================================= */
+
+.template-4 .bio-border {
+  border-radius: 18px;
+  padding: 10px;
+  background-color: #03313a;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  overflow: hidden;
+}
+
+/* Safe content area */
+.template-4 .bio-inner {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 130px 60px 60px; /* ⬆ header aur niche aayega */
+  font-family: "Playfair Display", serif;
+  color: #fefce8;
+}
+
+/* FORMAT text hide */
+.template-4 .bio-template-chip {
+  display: none !important;
+}
+
+/* Header */
+.template-4 .bio-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.template-4 .bio-name {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f8e38c;
+  text-shadow: 0 0 6px rgba(255, 233, 133, 0.65);
+}
+
+.template-4 .bio-sub {
+  font-size: 14px;
+  font-style: italic;
+  color: #eadeb5;
+}
+
+/* Sections */
+.template-4 .bio-section {
+  margin-bottom: 20px;
+}
+
+.template-4 .bio-section-title {
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 999px;
+  background: rgba(5, 20, 26, 0.85);
+  border: 1px solid #fcd34d;
+  color: #fcd34d;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 14px;
+}
+
+/* Rows */
+.template-4 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.template-4 .bio-row {
+  display: flex;
+  gap: 24px;
+  font-size: 14px;
+}
+
+/* Labels bold gold */
+.template-4 .bio-label {
+  flex: 0 0 160px;
+  color: #fcd34d;
+  font-weight: 600;
+}
+
+/* Values readable */
+.template-4 .bio-value {
+  color: #f8f6df;
+  font-weight: 400;
+}
+
+/* Layout + photo */
+.template-4 .bio-main {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.template-4 .bio-main-left {
+  flex: 1;
+}
+
+.template-4 .bio-main-right {
+  width: 160px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.template-4 .bio-photo {
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.55);
+}
+
+/* Footer */
+.template-4 .bio-footer {
+  margin-top: 28px;
+  font-size: 11px;
+  color: #e6e5da;
+  text-align: center;
+}
+
+/* =========================
+   Responsive tweaks
+   (mobile sirf jab PDF mode na ho)
+   ========================= */
+
+@media (max-width: 768px) {
+  body:not(.pdf-mode) .template-4 .bio-inner {
+    max-width: 100%;
+    padding: 80px 20px 35px;
+  }
+
+  body:not(.pdf-mode) .template-4 .bio-row {
+    gap: 10px;
+    font-size: 13px;
+  }
+
+  body:not(.pdf-mode) .template-4 .bio-label {
+    flex: 0 0 140px;
+  }
+
+  body:not(.pdf-mode) .template-4 .bio-main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  body:not(.pdf-mode) .template-4 .bio-main-right {
+    margin-bottom: 10px;
+  }
+}
+
+/* =========================================================
+   FORMAT 5 – CLASSIC GOLD BORDER (Libre Baskerville)
+   ========================================================= */
+
+.template-5 .bio-border {
+  border-radius: 18px;
+  padding: 8px;
+  background-color: #ffffff;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow: hidden;
+}
+
+/* Safe content area – border se kaafi distance */
+.template-5 .bio-inner {
+  max-width: 82%;
+  margin: 0 auto;
+  padding: 70px 50px 55px; /* top / sides / bottom */
+  font-family: "Libre Baskerville", "Times New Roman", serif;
+  color: #111827;
+}
+
+/* FORMAT 5 chip hide (agar kahin aa raha ho) */
+.template-5 .bio-template-chip {
+  display: none !important;
+}
+
+/* Header */
+.template-5 .bio-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.template-5 .bio-name {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #b45309; /* rich gold-brown */
+}
+
+.template-5 .bio-sub {
+  font-size: 13px;
+  color: #4b5563;
+  font-style: italic;
+}
+
+/* Section headings */
+.template-5 .bio-section {
+  margin-bottom: 20px;
+}
+
+.template-5 .bio-section-title {
+  display: inline-block;
+  padding: 5px 18px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid rgba(217, 119, 6, 0.85);
+  color: #b45309;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 12px;
+}
+
+/* Rows */
+.template-5 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.template-5 .bio-row {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+}
+
+/* Labels – gold, bold */
+.template-5 .bio-label {
+  flex: 0 0 170px;
+  color: #b45309;
+  font-weight: 600;
+}
+
+/* Values – dark neutral */
+.template-5 .bio-value {
+  flex: 1 1 auto;
+  color: #111827;
+  font-weight: 400;
+}
+
+/* Layout + photo */
+.template-5 .bio-main {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.template-5 .bio-main-left {
+  flex: 1;
+}
+
+.template-5 .bio-main-right {
+  width: 150px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 4px;
+  padding-right: 4px;
+}
+
+/* Photo style re-use but halka border */
+.template-5 .bio-photo {
+  border: 2px solid rgba(209, 213, 219, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* Footer */
+.template-5 .bio-footer {
+  margin-top: 22px;
+  font-size: 11px;
+  color: #6b7280;
+  text-align: center;
+}
+
+/* =========================
+   Responsive (mobile view)
+   ========================= */
+
+@media (max-width: 768px) {
+  body:not(.pdf-mode) .template-5 .bio-inner {
+    max-width: 100%;
+    padding: 40px 18px 28px;
+  }
+
+  body:not(.pdf-mode) .template-5 .bio-row {
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  body:not(.pdf-mode) .template-5 .bio-label {
+    flex: 0 0 140px;
+  }
+
+  body:not(.pdf-mode) .template-5 .bio-main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  body:not(.pdf-mode) .template-5 .bio-main-right {
+    margin-bottom: 10px;
+    padding-right: 0;
+  }
+}
+
+/* =========================================================
+   FORMAT 6 – ISLAMIC FLORAL (Bismillah on top)
+   ========================================================= */
+
+.template-6 .bio-border {
+  border-radius: 18px;
+  padding: 8px;
+  background-color: #fdf9f3;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow: hidden;
+}
+
+/* Safe content area
+   👉 Bismillah ke niche se hi text start hoga */
+.template-6 .bio-inner {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 260px 42px 60px;  /* ⬆ TOP padding bismillah + flowers se niche */
+  font-family: "Lora", "Century", "Times New Roman", serif;
+  color: #1f2933;
+}
+
+/* FORMAT chip hide */
+.template-6 .bio-template-chip {
+  display: none !important;
+}
+
+/* Header */
+.template-6 .bio-header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.template-6 .bio-name {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #854d0e;          /* warm brown/gold */
+}
+
+.template-6 .bio-sub {
+  font-size: 13px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Section headings */
+.template-6 .bio-section {
+  margin-bottom: 18px;
+}
+
+.template-6 .bio-section-title {
+  display: inline-block;
+  padding: 5px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(217, 119, 6, 0.85);
+  color: #b45309;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 10px;
+}
+
+/* Rows */
+.template-6 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.template-6 .bio-row {
+  display: flex;
+  gap: 22px;
+  font-size: 13px;
+}
+
+/* Labels – thoda golden brown */
+.template-6 .bio-label {
+  flex: 0 0 170px;
+  color: #b45309;
+  font-weight: 600;
+}
+
+/* Values – normal dark text */
+.template-6 .bio-value {
+  flex: 1 1 auto;
+  color: #111827;
+  font-weight: 400;
+}
+
+/* Layout + photo */
+.template-6 .bio-main {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.template-6 .bio-main-left {
+  flex: 1;
+}
+
+.template-6 .bio-main-right {
+  width: 150px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 4px;
+  padding-right: 4px;
+}
+
+/* Photo style */
+.template-6 .bio-photo {
+  border: 2px solid rgba(209, 213, 219, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* Footer */
+.template-6 .bio-footer {
+  margin-top: 22px;
+  font-size: 11px;
+  color: #6b7280;
+  text-align: center;
+}
+
+/* =========================
+   Responsive – mobile view
+   (PDF ke time desktop layout hi rahega)
+   ========================= */
+
+@media (max-width: 768px) {
+  body:not(.pdf-mode) .template-6 .bio-inner {
+    max-width: 100%;
+    padding: 210px 18px 30px; /* thoda kam top but fir bhi Bismillah ke niche */
+  }
+
+  body:not(.pdf-mode) .template-6 .bio-row {
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  body:not(.pdf-mode) .template-6 .bio-label {
+    flex: 0 0 140px;
+  }
+
+  body:not(.pdf-mode) .template-6 .bio-main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  body:not(.pdf-mode) .template-6 .bio-main-right {
+    margin-bottom: 10px;
+    padding-right: 0;
+  }
+}
+
+/* =========================================================
+   FORMAT 7 – ISLAMIC GOLD CALLIGRAPHY FRAME
+   ========================================================= */
+
+.template-7 .bio-border {
+  border-radius: 18px;
+  background-color: #ffffff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow: hidden;
+  padding: 8px;
+}
+
+/* 👉 Content starts AFTER the calligraphy area */
+.template-7 .bio-inner {
+  max-width: 82%;
+  margin: 0 auto;
+  padding: 260px 50px 55px; /* TOP padding adjusted for Bismillah */
+  font-family: "Lora", "Century", "Times New Roman", serif;
+  color: #111827;
+}
+
+/* Hide “Format 7” Chip */
+.template-7 .bio-template-chip {
+  display: none !important;
+}
+
+/* Header */
+.template-7 .bio-header {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.template-7 .bio-name {
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #a07017; /* Arabic calligraphy gold tone */
+}
+
+.template-7 .bio-sub {
+  font-size: 13px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Section styling */
+.template-7 .bio-section {
+  margin-bottom: 22px;
+}
+
+.template-7 .bio-section-title {
+  display: inline-block;
+  padding: 6px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(160, 112, 23, 0.85);
+  color: #a07017;
+  background: rgba(255,255,255,0.85);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* Rows */
+.template-7 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.template-7 .bio-row {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+}
+
+.template-7 .bio-label {
+  flex: 0 0 170px;
+  color: #a07017;
+  font-weight: 600;
+}
+
+.template-7 .bio-value {
+  flex: 1;
+  color: #111827;
+}
+
+/* Layout & photo */
+.template-7 .bio-main {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.template-7 .bio-main-left {
+  flex: 1;
+}
+
+.template-7 .bio-main-right {
+  width: 150px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.template-7 .bio-photo {
+  border: 2px solid rgba(160, 112, 23, 0.6);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* Footer */
+.template-7 .bio-footer {
+  margin-top: 22px;
+  font-size: 11px;
+  text-align: center;
+  color: #6b7280;
+}
+
+/* =========================================================
+   MOBILE RESPONSIVE (except in PDF mode)
+   ========================================================= */
+@media (max-width: 768px) {
+  body:not(.pdf-mode) .template-7 .bio-inner {
+    max-width: 100%;
+    padding: 210px 18px 30px;
+  }
+
+  body:not(.pdf-mode) .template-7 .bio-main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  body:not(.pdf-mode) .template-7 .bio-main-right {
+    margin-bottom: 14px;
+    width: auto;
+  }
+
+  body:not(.pdf-mode) .template-7 .bio-row {
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  body:not(.pdf-mode) .template-7 .bio-label {
+    flex: 0 0 140px;
+  }
+}
+
+/* =========================================================
+   FORMAT 8 – GANESH JI ROYAL PURPLE FRAME
+   ========================================================= */
+
+.template-8 .bio-border {
+  border-radius: 18px;
+  padding: 8px;
+  background-color: #2b0139;          /* fallback */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow: hidden;
+}
+
+/* 👉 Saara content Ganesh ji ke NEECHES se start hoga */
+.template-8 .bio-inner {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 250px 52px 60px;           /* TOP padding = Ganesh icon + thoda gap */
+  font-family: "Libre Baskerville", "Century", "Times New Roman", serif;
+  color: #fdf2ff;
+}
+
+/* "FORMAT 8" chip chhupa do */
+.template-8 .bio-template-chip {
+  display: none !important;
+}
+
+/* ========= HEADER ========= */
+
+.template-8 .bio-header {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.template-8 .bio-name {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #facc15;                      /* golden */
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.template-8 .bio-sub {
+  font-size: 13px;
+  color: #e5e7eb;
+  font-style: italic;
+}
+
+/* ========= SECTIONS ========= */
+
+.template-8 .bio-section {
+  margin-bottom: 22px;
+}
+
+.template-8 .bio-section-title {
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 999px;
+  background: rgba(43, 1, 57, 0.9);
+  border: 1px solid rgba(250, 204, 21, 0.9);
+  color: #facc15;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 12px;
+}
+
+/* ========= ROWS ========= */
+
+.template-8 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.template-8 .bio-row {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+}
+
+/* Labels – golden, bold */
+.template-8 .bio-label {
+  flex: 0 0 170px;
+  color: #facc15;
+  font-weight: 600;
+}
+
+/* Values – light text */
+.template-8 .bio-value {
+  flex: 1;
+  color: #f9fafb;
+  font-weight: 400;
+}
+
+/* ========= LAYOUT & PHOTO ========= */
+
+.template-8 .bio-main {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.template-8 .bio-main-left {
+  flex: 1;
+}
+
+.template-8 .bio-main-right {
+  width: 150px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 4px;
+  padding-right: 4px;
+}
+
+.template-8 .bio-photo {
+  border-radius: 14px;
+  border: 2px solid rgba(250, 204, 21, 0.7);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.7);
+  background: #1f2933;
+}
+
+/* ========= FOOTER ========= */
+
+.template-8 .bio-footer {
+  margin-top: 24px;
+  font-size: 11px;
+  color: #e5e7eb;
+  text-align: center;
+}
+
+/* =========================================================
+   MOBILE (sirf normal view ke liye, PDF me desktop layout hi)
+   ========================================================= */
+
+@media (max-width: 768px) {
+  body:not(.pdf-mode) .template-8 .bio-inner {
+    max-width: 100%;
+    padding: 210px 20px 32px;      /* thoda kam top, phir bhi Ganesh se niche */
+  }
+
+  body:not(.pdf-mode) .template-8 .bio-main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  body:not(.pdf-mode) .template-8 .bio-main-right {
+    margin-bottom: 14px;
+    padding-right: 0;
+  }
+
+  body:not(.pdf-mode) .template-8 .bio-row {
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  body:not(.pdf-mode) .template-8 .bio-label {
+    flex: 0 0 140px;
+  }
+}
+
+/* =========================================================
+   FORMAT 9 – MINIMAL GREEN BORDER (BOOKMAN STYLE)
+   ========================================================= */
+
+.template-9 .bio-border {
+  border-radius: 18px;
+  padding: 8px;
+  background-color: #f5faf4;           /* light greenish fallback */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow: hidden;
+}
+
+/* Saara content inner safe area me */
+.template-9 .bio-inner {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 70px 52px 60px;             /* top/side/bottom spacing */
+  font-family: "EB Garamond", "Bookman Old Style", "Times New Roman", serif;
+  color: #0f172a;
+}
+
+/* "FORMAT 9" chip hide */
+.template-9 .bio-template-chip {
+  display: none !important;
+}
+
+/* ========= HEADER ========= */
+
+.template-9 .bio-header {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.template-9 .bio-name {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #166534;                       /* dark green */
+}
+
+.template-9 .bio-sub {
+  font-size: 13px;
+  color: #4b5563;
+  font-style: italic;
+}
+
+/* ========= SECTIONS ========= */
+
+.template-9 .bio-section {
+  margin-bottom: 22px;
+}
+
+.template-9 .bio-section-title {
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 999px;
+  background: rgba(240, 253, 244, 0.95);     /* very light green */
+  border: 1px solid rgba(22, 101, 52, 0.9);  /* green border */
+  color: #166534;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 12px;
+}
+
+/* ========= ROWS ========= */
+
+.template-9 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.template-9 .bio-row {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+}
+
+/* Labels – green, bold */
+.template-9 .bio-label {
+  flex: 0 0 170px;
+  color: #166534;
+  font-weight: 600;
+}
+
+/* Values – normal dark text */
+.template-9 .bio-value {
+  flex: 1;
+  color: #111827;
+  font-weight: 400;
+}
+
+/* ========= LAYOUT & PHOTO ========= */
+
+.template-9 .bio-main {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.template-9 .bio-main-left {
+  flex: 1;
+}
+
+.template-9 .bio-main-right {
+  width: 150px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 4px;
+  padding-right: 4px;
+}
+
+.template-9 .bio-photo {
+  border-radius: 14px;
+  border: 2px solid rgba(22, 101, 52, 0.6);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.35);
+  background: #f9fafb;
+}
+
+/* ========= FOOTER ========= */
+
+.template-9 .bio-footer {
+  margin-top: 24px;
+  font-size: 11px;
+  color: #6b7280;
+  text-align: center;
+}
+
+/* =========================================================
+   MOBILE (sirf normal view ke liye, PDF me desktop layout hi)
+   ========================================================= */
+
+@media (max-width: 768px) {
+  body:not(.pdf-mode) .template-9 .bio-inner {
+    max-width: 100%;
+    padding: 40px 20px 32px;
+  }
+
+  body:not(.pdf-mode) .template-9 .bio-main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  body:not(.pdf-mode) .template-9 .bio-main-right {
+    margin-bottom: 14px;
+    padding-right: 0;
+  }
+
+  body:not(.pdf-mode) .template-9 .bio-row {
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  body:not(.pdf-mode) .template-9 .bio-label {
+    flex: 0 0 140px;
+  }
+}
+
+/* =========================================================
+   FORMAT 10 – BLUE 🌊 + GREEN 🍃 GRADIENT BORDER
+   Font: Century / Libre Baskerville
+   ========================================================= */
+
+.template-10 .bio-border {
+  border-radius: 18px;
+  padding: 8px;
+  background-color: #e6f4f1;         /* fallback */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow: hidden;
+}
+
+/* Safe Content Area */
+.template-10 .bio-inner {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 70px 52px 60px;
+  font-family: "Libre Baskerville", "Century", "Times New Roman", serif;
+  color: #000000;
+}
+
+/* Hide Format Chip */
+.template-10 .bio-template-chip {
+  display: none !important;
+}
+
+/* ========= HEADER ========= */
+
+.template-10 .bio-header {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.template-10 .bio-name {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #0b2545;
+}
+
+.template-10 .bio-sub {
+  font-size: 13px;
+  color: #334155;
+  font-style: italic;
+}
+
+/* ========= SECTIONS ========= */
+
+.template-10 .bio-section {
+  margin-bottom: 22px;
+}
+
+.template-10 .bio-section-title {
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 999px;
+  background: rgba(226,245,255,0.8);
+  border: 1px solid #0b2545;
+  color: #0b2545;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 12px;
+}
+
+/* ========= ROWS ========= */
+
+.template-10 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.template-10 .bio-row {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+}
+
+.template-10 .bio-label {
+  flex: 0 0 170px;
+  color: #0d1b2a;
+  font-weight: 600;
+}
+
+.template-10 .bio-value {
+  flex: 1;
+  color: #000;
+  font-weight: 400;
+}
+
+/* ========= PHOTO ========= */
+
+.template-10 .bio-main {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.template-10 .bio-main-left {
+  flex: 1;
+}
+
+.template-10 .bio-main-right {
+  width: 150px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 4px;
+}
+
+.template-10 .bio-photo {
+  border-radius: 14px;
+  border: 2px solid #000;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+  background: #ffffff;
+}
+
+/* ========= FOOTER ========= */
+
+.template-10 .bio-footer {
+  margin-top: 24px;
+  font-size: 11px;
+  color: #475569;
+  text-align: center;
+}
+
+/* =========================================================
+   MOBILE RESPONSIVE (Only normal view)
+   ========================================================= */
+
+@media (max-width: 768px) {
+  body:not(.pdf-mode) .template-10 .bio-inner {
+    max-width: 100%;
+    padding: 40px 20px 32px;
+  }
+
+  body:not(.pdf-mode) .template-10 .bio-main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  body:not(.pdf-mode) .template-10 .bio-main-right {
+    margin-bottom: 14px;
+  }
+
+  body:not(.pdf-mode) .template-10 .bio-row {
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  body:not(.pdf-mode) .template-10 .bio-label {
+    flex: 0 0 140px;
+  }
+}
+
+/* =========================================================
+   FORMAT 11 – ISLAMIC BLUE LANTERN FRAME
+   ========================================================= */
+
+.template-11 .bio-border {
+  border-radius: 18px;
+  padding: 8px;
+  background-color: #ffffff;               /* fallback */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow: hidden;
+}
+
+/* ⚠️ Text sirf safe center area me
+   Top blue arch + lanterns + bottom strip par nahi aayega  */
+.template-11 .bio-inner {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 190px 58px 90px; /* top / sides / bottom */
+  font-family: "Libre Baskerville", "Century", "Times New Roman", serif;
+  color: #0f172a;
+}
+
+/* FORMAT chip hide */
+.template-11 .bio-template-chip {
+  display: none !important;
+}
+
+/* ========= HEADER ========= */
+
+.template-11 .bio-header {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.template-11 .bio-name {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0b3b73;        /* deep blue */
+}
+
+.template-11 .bio-sub {
+  font-size: 13px;
+  color: #4b5563;
+  font-style: italic;
+}
+
+/* ========= SECTIONS ========= */
+
+.template-11 .bio-section {
+  margin-bottom: 22px;
+}
+
+.template-11 .bio-section-title {
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(11, 59, 115, 0.9);
+  color: #0b3b73;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 12px;
+}
+
+/* ========= ROWS ========= */
+
+.template-11 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.template-11 .bio-row {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+}
+
+.template-11 .bio-label {
+  flex: 0 0 170px;
+  color: #0b3b73;
+  font-weight: 600;
+}
+
+.template-11 .bio-value {
+  flex: 1;
+  color: #111827;
+  font-weight: 400;
+}
+
+/* ========= PHOTO ========= */
+
+.template-11 .bio-main {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.template-11 .bio-main-left {
+  flex: 1;
+}
+
+.template-11 .bio-main-right {
+  width: 150px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 4px;
+}
+
+.template-11 .bio-photo {
+  border-radius: 14px;
+  border: 2px solid rgba(11, 59, 115, 0.75);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.35);
+  background: #ffffff;
+}
+
+/* ========= FOOTER ========= */
+
+.template-11 .bio-footer {
+  margin-top: 24px;
+  font-size: 11px;
+  color: #6b7280;
+  text-align: center;
+}
+
+/* =========================================================
+   MOBILE (sirf normal view ke liye, PDF me desktop layout hi)
+   ========================================================= */
+
+@media (max-width: 768px) {
+  body:not(.pdf-mode) .template-11 .bio-inner {
+    max-width: 100%;
+    padding: 150px 20px 80px;  /* top/bottom kam, par design se safe */
+  }
+
+  body:not(.pdf-mode) .template-11 .bio-main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  body:not(.pdf-mode) .template-11 .bio-main-right {
+    margin-bottom: 14px;
+  }
+
+  body:not(.pdf-mode) .template-11 .bio-row {
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  body:not(.pdf-mode) .template-11 .bio-label {
+    flex: 0 0 140px;
+  }
+}
+
+/* =========================================================
+   FORMAT 12 – GANESH JI GOLDEN MANDALA
+   ========================================================= */
+
+.template-12 .bio-border {
+  border-radius: 18px;
+  padding: 8px;
+  background-color: #fdf5e6;               /* fallback */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow: hidden;
+}
+
+/* ⚠ Text Ganesh ji ke NEECHES se hi start hoga */
+.template-12 .bio-inner {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 230px 56px 90px;   /* top / sides / bottom */
+  font-family: "Source Sans 3", Arial, "Helvetica Neue", sans-serif;
+  color: #3f2a13;
+}
+
+/* "FORMAT 12" chip hide */
+.template-12 .bio-template-chip {
+  display: none !important;
+}
+
+/* ========= HEADER ========= */
+
+.template-12 .bio-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.template-12 .bio-name {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #b45309;                 /* warm golden-brown */
+}
+
+.template-12 .bio-sub {
+  font-size: 13px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* ========= SECTIONS ========= */
+
+.template-12 .bio-section {
+  margin-bottom: 22px;
+}
+
+.template-12 .bio-section-title {
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(180, 83, 9, 0.85);
+  color: #b45309;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 12px;
+}
+
+/* ========= ROWS ========= */
+
+.template-12 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.template-12 .bio-row {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+}
+
+.template-12 .bio-label {
+  flex: 0 0 170px;
+  color: #8b5a2b;
+  font-weight: 600;
+}
+
+.template-12 .bio-value {
+  flex: 1;
+  color: #2b2112;
+  font-weight: 400;
+}
+
+/* ========= PHOTO ========= */
+
+.template-12 .bio-main {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.template-12 .bio-main-left {
+  flex: 1;
+}
+
+.template-12 .bio-main-right {
+  width: 150px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 4px;
+}
+
+.template-12 .bio-photo {
+  border-radius: 14px;
+  border: 2px solid rgba(180, 83, 9, 0.7);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  background: #fff7ed;
+}
+
+/* ========= FOOTER ========= */
+
+.template-12 .bio-footer {
+  margin-top: 24px;
+  font-size: 11px;
+  color: #6b7280;
+  text-align: center;
+}
+
+/* =========================================================
+   MOBILE (sirf normal view ke liye, PDF me desktop layout hi)
+   ========================================================= */
+
+@media (max-width: 768px) {
+  body:not(.pdf-mode) .template-12 .bio-inner {
+    max-width: 100%;
+    padding: 190px 20px 80px; /* thoda kam top/bottom, par Ganesh & mandala se safe */
+  }
+
+  body:not(.pdf-mode) .template-12 .bio-main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  body:not(.pdf-mode) .template-12 .bio-main-right {
+    margin-bottom: 14px;
+  }
+
+  body:not(.pdf-mode) .template-12 .bio-row {
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  body:not(.pdf-mode) .template-12 .bio-label {
+    flex: 0 0 140px;
+  }
+}
+
+/* =========================================================
+   FORMAT 13 – Minimal Ganesha (Text starts below icon)
+   ========================================================= */
+
+.template-13 .bio-border {
+  border-radius: 18px;
+  background-color: #F7EEDD; /* fallback */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow: hidden;
+  padding: 0; 
+}
+
+/* 👇 TEXT ALWAYS STARTS BELOW GANESH JI */
+.template-13 .bio-inner {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 240px 56px 60px; /* Top padding = Ganesha icon height + gap */
+  font-family: "Century", "Libre Baskerville", "Times New Roman", serif;
+  color: #3a3225;
+}
+
+/* Hide Template Chip */
+.template-13 .bio-template-chip {
+  display: none !important;
+}
+
+/* ========= HEADER ========= */
+
+.template-13 .bio-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.template-13 .bio-name {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #8B5E3C;
+}
+
+.template-13 .bio-sub {
+  font-size: 13px;
+  color: #6b665a;
+  font-style: italic;
+}
+
+/* ========= SECTIONS ========= */
+
+.template-13 .bio-section {
+  margin-bottom: 22px;
+}
+
+.template-13 .bio-section-title {
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid #8B5E3C;
+  color: #8B5E3C;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 12px;
+}
+
+/* ========= ROWS ========= */
+
+.template-13 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.template-13 .bio-row {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+}
+
+.template-13 .bio-label {
+  flex: 0 0 170px;
+  color: #8B5E3C;
+  font-weight: 600;
+}
+
+.template-13 .bio-value {
+  flex: 1;
+  color: #3a3225;
+  font-weight: 400;
+}
+
+/* ========= PHOTO ========= */
+
+.template-13 .bio-main {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.template-13 .bio-main-right {
+  width: 150px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 4px;
+}
+
+.template-13 .bio-photo {
+  border-radius: 8px;
+  border: 2px solid #8B5E3C;
+  background: #eee4d4;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
+
+/* ========= FOOTER ========= */
+
+.template-13 .bio-footer {
+  margin-top: 24px;
+  font-size: 11px;
+  color: #7a7163;
+  text-align: center;
+}
+
+/* =========================================================
+   MOBILE VIEW ONLY (PDF me desktop layout hi use hoga)
+   ========================================================= */
+
+@media (max-width: 768px) {
+  body:not(.pdf-mode) .template-13 .bio-inner {
+    max-width: 100%;
+    padding: 200px 22px 40px; /* slightly less top/bottom */
+  }
+
+  body:not(.pdf-mode) .template-13 .bio-main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  body:not(.pdf-mode) .template-13 .bio-main-right {
+    margin-bottom: 14px;
+  }
+
+  body:not(.pdf-mode) .template-13 .bio-label {
+    flex: 0 0 140px;
+  }
+}
+
+/* =========================================================
+   FORMAT 14 – Elegant Golden Border (Century Font)
+   ========================================================= */
+
+.template-14 .bio-border {
+  border-radius: 12px;
+  background-color: #ffffff; /* fallback */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  padding: 60px; /* inner spacing so text does NOT touch border */
+  overflow: hidden;
+}
+
+/* Background Image Apply */
+.template-14 .bio-border {
+  background-image: url("format14.jpg");
+}
+
+/* Hide Template Chip */
+.template-14 .bio-template-chip {
+  display: none !important;
+}
+
+/* ========== FONT & COLORS ========== */
+.template-14 .bio-inner {
+  max-width: 80%;
+  margin: 0 auto;
+  font-family: "Century", "Times New Roman", serif;
+  color: #2a2a2a;
+}
+
+/* HEADER */
+.template-14 .bio-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.template-14 .bio-name {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #9c742f; /* Golden tone */
+}
+
+.template-14 .bio-sub {
+  font-size: 13px;
+  color: #555;
+  font-style: italic;
+}
+
+/* SECTION */
+.template-14 .bio-section {
+  margin-bottom: 22px;
+}
+
+.template-14 .bio-section-title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #9c742f;
+  border-bottom: 1px solid #d9bb75;
+  padding-bottom: 3px;
+  margin-bottom: 10px;
+}
+
+/* ROWS */
+.template-14 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.template-14 .bio-row {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+}
+
+.template-14 .bio-label {
+  flex: 0 0 170px;
+  color: #9c742f;
+  font-weight: 600;
+}
+
+.template-14 .bio-value {
+  flex: 1;
+  color: #2a2a2a;
+}
+
+/* PHOTO */
+.template-14 .bio-main {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.template-14 .bio-main-right {
+  width: 150px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.template-14 .bio-photo {
+  border-radius: 8px;
+  border: 2px solid #c8a96c;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+}
+
+/* FOOTER */
+.template-14 .bio-footer {
+  margin-top: 24px;
+  font-size: 11px;
+  color: #444;
+  text-align: center;
+}
+
+/* MOBILE RESPONSIVE (Preview Only) */
+@media (max-width: 768px) {
+  body:not(.pdf-mode) .template-14 .bio-inner {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  body:not(.pdf-mode) .template-14 .bio-main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  body:not(.pdf-mode) .template-14 .bio-row {
+    gap: 10px;
+  }
+
+  body:not(.pdf-mode) .template-14 .bio-label {
+    flex: 0 0 140px;
+  }
+}
+
+/* =========================================================
+   FORMAT 15 – Minimal Golden Frame (Century Font)
+   ========================================================= */
+
+.template-15 .bio-border {
+  border-radius: 12px;
+  background-color: #ffffff;           /* fallback */
+  background-image: url("format15.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  padding: 60px;                       /* text border se chipke nahi */
+  overflow: hidden;
+}
+
+/* Inner content area + font */
+.template-15 .bio-inner {
+  max-width: 80%;
+  margin: 0 auto;
+  font-family: "Century", "Times New Roman", serif;
+  color: #222222;
+}
+
+/* Format chip hide */
+.template-15 .bio-template-chip {
+  display: none !important;
+}
+
+/* ========= HEADER ========= */
+
+.template-15 .bio-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.template-15 .bio-name {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #c58a22;          /* soft golden */
+}
+
+.template-15 .bio-sub {
+  font-size: 13px;
+  color: #666666;
+  font-style: italic;
+}
+
+/* ========= SECTIONS ========= */
+
+.template-15 .bio-section {
+  margin-bottom: 22px;
+}
+
+.template-15 .bio-section-title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #c58a22;
+  border-bottom: 1px solid #e2c46f;
+  padding-bottom: 3px;
+  margin-bottom: 10px;
+}
+
+/* ========= ROWS ========= */
+
+.template-15 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.template-15 .bio-row {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+}
+
+.template-15 .bio-label {
+  flex: 0 0 170px;
+  color: #c58a22;
+  font-weight: 600;
+}
+
+.template-15 .bio-value {
+  flex: 1;
+  color: #222222;
+}
+
+/* ========= PHOTO ========= */
+
+.template-15 .bio-main {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.template-15 .bio-main-left {
+  flex: 1;
+}
+
+.template-15 .bio-main-right {
+  width: 150px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.template-15 .bio-photo {
+  border-radius: 8px;
+  border: 2px solid #e2c46f;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
+
+/* ========= FOOTER ========= */
+
+.template-15 .bio-footer {
+  margin-top: 24px;
+  font-size: 11px;
+  color: #777777;
+  text-align: center;
+}
+
+/* ========= MOBILE (preview only, PDF me desktop layout) ========= */
+
+@media (max-width: 768px) {
+  body:not(.pdf-mode) .template-15 .bio-inner {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+
+  body:not(.pdf-mode) .template-15 .bio-main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  body:not(.pdf-mode) .template-15 .bio-row {
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  body:not(.pdf-mode) .template-15 .bio-label {
+    flex: 0 0 140px;
+  }
+}
+
+/* =========================================================
+   FORMAT 16 – Elegant Gold Border (Cinzel Font)
+   ========================================================= */
+
+.template-16 .bio-border {
+  border-radius: 12px;
+  background-color: #ffffff;      /* fallback white */
+  background-image: url("format16.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  padding: 70px 55px;             /* border se safe distance */
+  overflow: hidden;
+}
+
+/* Inner content + font */
+.template-16 .bio-inner {
+  max-width: 78%;
+  margin: 0 auto;
+  font-family: "Cinzel", serif;
+  color: #3b3b3b;
+}
+
+/* “FORMAT 16” chip hide */
+.template-16 .bio-template-chip {
+  display: none !important;
+}
+
+/* ========= HEADER ========= */
+.template-16 .bio-header {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.template-16 .bio-name {
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #c58a22;              /* Gold heading */
+}
+
+.template-16 .bio-sub {
+  font-size: 14px;
+  font-style: italic;
+  color: #6b6b6b;
+}
+
+/* ========= SECTIONS ========= */
+.template-16 .bio-section {
+  margin-bottom: 24px;
+}
+
+.template-16 .bio-section-title {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #b88723;
+  border-bottom: 1px solid #e7cd94;
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+}
+
+/* ========= ROWS ========= */
+.template-16 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.template-16 .bio-row {
+  display: flex;
+  gap: 22px;
+  font-size: 14px;
+}
+
+.template-16 .bio-label {
+  flex: 0 0 180px;
+  color: #b88723;
+  font-weight: 600;
+}
+
+.template-16 .bio-value {
+  flex: 1;
+  color: #333;
+  font-weight: 500;
+}
+
+/* ========= PHOTO ========= */
+.template-16 .bio-main {
+  display: flex;
+  gap: 26px;
+  align-items: flex-start;
+}
+
+.template-16 .bio-main-left {
+  flex: 1;
+}
+
+.template-16 .bio-main-right {
+  width: 160px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.template-16 .bio-photo {
+  border-radius: 8px;
+  border: 2px solid #e8c469;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+/* ========= FOOTER ========= */
+.template-16 .bio-footer {
+  margin-top: 26px;
+  font-size: 12px;
+  color: #777;
+  text-align: center;
+}
+
+/* ========== MOBILE VIEW ONLY (PDF unaffected) ======== */
+@media (max-width: 768px) {
+  body:not(.pdf-mode) .template-16 .bio-inner {
+    max-width: 100%;
+    padding: 0 14px;
+  }
+
+  body:not(.pdf-mode) .template-16 .bio-main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  body:not(.pdf-mode) .template-16 .bio-row {
+    gap: 10px;
+    font-size: 13px;
+  }
+
+  body:not(.pdf-mode) .template-16 .bio-label {
+    flex: 0 0 130px;
+  }
+}
+
+/* =========================================================
+   FORMAT 17 – Pink Royal Border (FULL IMAGE + CLEAN SPACING)
+   ========================================================= */
+
+/* Outer A4 card which carries the background image */
+.template-17 .bio-border {
+  /* full background image – no cropping */
+  background: #fce4ef url("format17.jpg") no-repeat center top;
+  background-size: 100% 100%;      /* pura photo 100% width/height */
+  border-radius: 0;                /* frame ko crop na kare; chahe to 8px bhi rakh sakte ho */
+  padding: 0;                      /* padding inner box me hoga */
+  overflow: hidden;
+}
+
+/* Inner content area – all spacing yahan se control hoga */
+.template-17 .bio-inner {
+  max-width: 78%;
+  margin: 0 auto;
+  padding: 90px 52px 70px;         /* top / sides / bottom */
+  font-family: "Cinzel", serif;    /* Century style classy font */
+  color: #4a2e2e;
+}
+
+/* Format chip hide */
+.template-17 .bio-template-chip {
+  display: none !important;
+}
+
+/* ---------------- HEADER ---------------- */
+
+.template-17 .bio-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.template-17 .bio-name {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #b26a00;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 6px;
+}
+
+.template-17 .bio-sub {
+  font-size: 14px;
+  font-style: italic;
+  color: #6f4b4b;
+}
+
+/* optional small divider under header (agar chahiye) */
+.template-17 .header-divider {
+  width: 110px;
+  height: 2px;
+  margin: 12px auto 18px;
+  border-radius: 999px;
+  background: rgba(178, 106, 0, 0.4);
+}
+
+/* ---------------- SECTIONS ---------------- */
+
+.template-17 .bio-section {
+  margin-bottom: 24px;
+}
+
+.template-17 .bio-section-title {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #b26a00;
+  border-bottom: 1px solid rgba(222, 168, 84, 0.85);
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+}
+
+/* ---------------- ROWS ---------------- */
+
+.template-17 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.template-17 .bio-row {
+  display: flex;
+  gap: 22px;
+  font-size: 14px;
+}
+
+.template-17 .bio-label {
+  flex: 0 0 180px;
+  color: #b26a00;
+  font-weight: 600;
+}
+
+.template-17 .bio-value {
+  flex: 1;
+  color: #4a2e2e;
+}
+
+/* ---------------- MAIN LAYOUT + PHOTO ---------------- */
+
+.template-17 .bio-main {
+  display: flex;
+  gap: 26px;
+  align-items: flex-start;
+}
+
+.template-17 .bio-main-left {
+  flex: 1;
+}
+
+.template-17 .bio-main-right {
+  width: 160px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.template-17 .bio-photo {
+  border-radius: 10px;
+  border: 2px solid rgba(222, 168, 84, 0.95);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  background: #fdf2f8;
+}
+
+/* ---------------- FOOTER ---------------- */
+
+.template-17 .bio-footer {
+  margin-top: 26px;
+  font-size: 12px;
+  text-align: center;
+  color: #6b3d3d;
+}
+
+/* =========================================================
+   MOBILE PREVIEW ONLY (PDF me desktop layout hi rahega)
+   ========================================================= */
+
+@media (max-width: 768px) {
+  body:not(.pdf-mode) .template-17 .bio-inner {
+    max-width: 100%;
+    padding: 70px 20px 40px;
+  }
+
+  body:not(.pdf-mode) .template-17 .bio-main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  body:not(.pdf-mode) .template-17 .bio-main-right {
+    margin-bottom: 14px;
+  }
+
+  body:not(.pdf-mode) .template-17 .bio-row {
+    gap: 10px;
+    font-size: 13px;
+  }
+
+  body:not(.pdf-mode) .template-17 .bio-label {
+    flex: 0 0 135px;
+  }
+}
+
+/* ============================================================
+   FORMAT 18 – White Floral (Century)
+   ============================================================ */
+
+.template-18 .bio-border {
+  background-color: #ffffff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+
+/* Inner content area - FIXED PADDING */
+.template-18 .bio-inner {
+  max-width: 70% !important; /* Increased from 65% */
+  margin: 0 auto;
+  padding: 120px 80px 100px !important; /* Reduced padding */
+  font-family: "Century", "Times New Roman", serif;
+  color: #222222;
+  box-sizing: border-box;
+  line-height: 1.5 !important; /* Consistent line height */
+}
+
+.template-18 .bio-template-chip {
+  display: none !important;
+}
+
+/* ========= HEADER ========= */
+.template-18 .bio-header {
+  text-align: center;
+  margin-bottom: 25px !important;
+}
+
+.template-18 .bio-name {
+  font-size: 28px !important; /* Reduced from 32px */
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #111827;
+  margin-bottom: 5px !important;
+}
+
+.template-18 .bio-sub {
+  font-size: 14px !important; /* Reduced from 15px */
+  font-style: italic;
+  color: #4b5563;
+}
+
+/* ========= SECTIONS ========= */
+.template-18 .bio-section {
+  margin-bottom: 20px !important;
+}
+
+.template-18 .bio-section-title {
+  font-size: 13px !important; /* Reduced from 14px */
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em !important; /* Reduced from 0.13em */
+  margin-bottom: 10px !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+  padding-bottom: 4px;
+  color: #111827;
+}
+
+/* ========= ROWS FIX ========= */
+.template-18 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px !important; /* Reduced from 8px */
+}
+
+.template-18 .bio-row {
+  display: flex;
+  gap: 15px !important; /* Reduced from 22px */
+  font-size: 13px !important; /* Reduced from 14px */
+  line-height: 1.4 !important; /* Fixed line height */
+  align-items: flex-start !important;
+  min-height: 24px !important; /* Ensures consistent height */
+}
+
+.template-18 .bio-label {
+  flex: 0 0 150px !important; /* Reduced from 170px */
+  font-weight: 600;
+  color: #111827;
+  padding-top: 2px !important; /* Aligns with value */
+}
+
+.template-18 .bio-value {
+  flex: 1;
+  color: #333333;
+  font-weight: 400;
+  white-space: normal !important; /* Allows text to wrap */
+  word-break: break-word !important;
+}
+
+/* Special handling for table/markdown content */
+.template-18 .bio-value table,
+.template-18 .bio-value pre {
+  font-family: 'Courier New', monospace !important;
+  font-size: 12px !important;
+  line-height: 1.3 !important;
+  white-space: pre-wrap !important;
+  word-wrap: break-word !important;
+  background: #f8f9fa !important;
+  padding: 8px !important;
+  border-radius: 4px !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+/* ========= MAIN LAYOUT + PHOTO ========= */
+.template-18 .bio-main {
+  display: flex;
+  gap: 24px !important; /* Reduced from 28px */
+  align-items: flex-start;
+  margin-bottom: 20px !important;
+}
+
+.template-18 .bio-main-left {
+  flex: 1;
+}
+
+.template-18 .bio-main-right {
+  width: 130px !important; /* Reduced from 140px */
+  flex-shrink: 0;
+}
+
+.template-18 .bio-photo {
+  border-radius: 8px !important;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important; /* Lighter shadow */
+  background: #f9fafb;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ========= FOOTER ========= */
+.template-18 .bio-footer {
+  margin-top: 20px !important;
+  text-align: center;
+  font-size: 10px !important; /* Reduced from 11px */
+  color: #6b7280;
+  padding-top: 10px !important;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* =========================================================
+   LIVE PREVIEW FIX (Normal mode)
+   ========================================================= */
+body:not(.pdf-mode) .template-18 .bio-inner {
+  max-width: 72% !important;
+  padding: 100px 70px 80px !important;
+  font-size: 14px !important;
+}
+
+body:not(.pdf-mode) .template-18 .bio-name {
+  font-size: 26px !important;
+}
+
+body:not(.pdf-mode) .template-18 .bio-row {
+  font-size: 12.5px !important;
+  gap: 12px !important;
+}
+
+body:not(.pdf-mode) .template-18 .bio-label {
+  flex: 0 0 140px !important;
+}
+
+/* =========================================================
+   PDF MODE FIX (A4 Dimensions)
+   ========================================================= */
+body.pdf-mode .template-18 .bio-border {
+  width: 210mm !important;
+  min-height: 297mm !important;
+  margin: 0 auto !important;
+  overflow: visible !important;
+}
+
+body.pdf-mode .template-18 .bio-inner {
+  max-width: 100% !important;
+  width: 100% !important;
+  padding: 20mm 25mm 15mm !important; /* Reduced margins */
+  margin: 0 !important;
+  font-size: 12px !important;
+  box-sizing: border-box !important;
+}
+
+body.pdf-mode .template-18 .bio-name {
+  font-size: 24px !important;
+}
+
+body.pdf-mode .template-18 .bio-sub {
+  font-size: 13px !important;
+}
+
+body.pdf-mode .template-18 .bio-section-title {
+  font-size: 12px !important;
+}
+
+body.pdf-mode .template-18 .bio-row {
+  font-size: 11px !important;
+  gap: 12px !important;
+  min-height: 20px !important;
+}
+
+body.pdf-mode .template-18 .bio-label {
+  flex: 0 0 130px !important;
+}
+
+body.pdf-mode .template-18 .bio-main {
+  gap: 18px !important;
+}
+
+body.pdf-mode .template-18 .bio-main-right {
+  width: 110px !important;
+}
+
+body.pdf-mode .template-18 .bio-footer {
+  font-size: 9px !important;
+}
+
+/* =========================================================
+   MOBILE VIEW (Only for preview, not PDF)
+   ========================================================= */
+@media (max-width: 768px) {
+  body:not(.pdf-mode) .template-18 .bio-inner {
+    max-width: 95% !important;
+    padding: 80px 20px 60px !important;
+  }
+
+  body:not(.pdf-mode) .template-18 .bio-main {
+    flex-direction: column-reverse !important;
+    align-items: center !important;
+    gap: 15px !important;
+  }
+
+  body:not(.pdf-mode) .template-18 .bio-main-right {
+    margin-bottom: 15px !important;
+    width: 120px !important;
+  }
+
+  body:not(.pdf-mode) .template-18 .bio-label {
+    flex: 0 0 120px !important;
+  }
+
+  body:not(.pdf-mode) .template-18 .bio-row {
+    gap: 8px !important;
+    font-size: 12px !important;
+    flex-wrap: wrap !important;
+  }
+}
+
+/* =========================================================
+   TABLE/MARKDOWN CONTENT SPECIAL FIX
+   ========================================================= */
+.template-18 .bio-value pre,
+.template-18 .bio-value table,
+.template-18 .bio-value .markdown-table {
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace !important;
+  font-size: 11px !important;
+  line-height: 1.2 !important;
+  background: #f8f9fa !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 4px !important;
+  padding: 6px !important;
+  overflow-x: auto !important;
+  margin: 2px 0 !important;
+}
+
+.template-18 .bio-value table {
+  border-collapse: collapse !important;
+  width: 100% !important;
+}
+
+.template-18 .bio-value table td,
+.template-18 .bio-value table th {
+  border: 1px solid #d1d5db !important;
+  padding: 4px 6px !important;
+  text-align: left !important;
+}
+
+/* ============================================================
+   FORMAT 19 – Final (same style as Format 17) | Century
+   ============================================================ */
+
+/* OUTER CARD – background image aur frame */
+/* OUTER CARD – background frame + safe padding */
+.template-19 .bio-border {
+  max-width: 900px;                 /* center me card, desktop jaisa */
+  margin: 0 auto;
+
+  /* A4 jaisi minimum height – taaki full image dikh sake */
+  min-height: 1120px;               /* approx 794x1123 ratio */
+
+  /* BACKGROUND IMAGE settings (image JS se set ho to sirf size/position rakho) */
+  background-size: contain;         /* full frame visible (no crop) */
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  /* INNER SAFE GAP – yahi se text start hoga */
+  padding: 130px 90px 150px;        /* TOP | LEFT/RIGHT | BOTTOM */
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* PDF ke time bhi EXACT same layout */
+body.pdf-mode .template-19 .bio-border {
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: 1120px;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  padding: 130px 90px 150px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+
+/* INNER CONTENT AREA (text block) */
+.template-19 .bio-inner {
+  max-width: 68%;                  /* Format 17 jaisa center width */
+  margin: 0 auto;
+  font-family: "Century", "Times New Roman", serif;
+  color: #111827;
+  box-sizing: border-box;
+}
+
+/* PDF me bhi same width (surprise na ho) */
+body.pdf-mode .template-19 .bio-inner {
+  max-width: 68%;
+}
+
+/* Template chip hide */
+.template-19 .bio-template-chip {
+  display: none !important;
+}
+
+/* ========== HEADER ========== */
+
+.template-19 .bio-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.template-19 .bio-name {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+}
+
+.template-19 .bio-sub {
+  font-size: 14px;
+  font-style: italic;
+  color: #4b5563;
+  margin-bottom: 30px;
+}
+
+/* ========== SECTION TITLES ========== */
+
+.template-19 .bio-section {
+  margin-bottom: 24px;
+}
+
+.template-19 .bio-section-title {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+}
+
+/* ========== ROWS (LABEL + VALUE) ========== */
+
+.template-19 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.template-19 .bio-row {
+  display: flex;
+  flex-wrap: nowrap;           /* words vertical nahi tootenge */
+  gap: 24px;
+  font-size: 14px;
+  align-items: flex-start;
+}
+
+.template-19 .bio-label {
+  flex: 0 0 170px;
+  font-weight: 600;
+  color: #111827;
+  text-align: left;
+}
+
+.template-19 .bio-value {
+  flex: 1;
+  min-width: 0;
+  color: #333333;
+  text-align: left;
+  white-space: normal;
+  word-break: normal;
+}
+
+/* ========== PHOTO / MAIN LAYOUT ========== */
+
+.template-19 .bio-main {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.template-19 .bio-main-left {
+  flex: 1;
+}
+
+.template-19 .bio-main-right {
+  width: 150px;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.template-19 .bio-photo {
+  border-radius: 10px;
+  border: 2px solid rgba(180, 130, 0, 0.7);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  background: #f9fafb;
+}
+
+/* ========== FOOTER ========== */
+
+.template-19 .bio-footer {
+  margin-top: 26px;
+  text-align: center;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* ========== MOBILE PREVIEW ONLY ========== */
+
+@media (max-width: 768px) {
+  /* sirf normal view ke liye, PDF nahi */
+  body:not(.pdf-mode) .template-19 .bio-border {
+    padding: 120px 24px 120px;
+    background-size: contain;      /* mobile par bhi full frame dikhaye */
+    background-position: center top;
+  }
+
+  body:not(.pdf-mode) .template-19 .bio-inner {
+    max-width: 100%;
+  }
+
+  body:not(.pdf-mode) .template-19 .bio-main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  body:not(.pdf-mode) .template-19 .bio-main-right {
+    margin-bottom: 14px;
+  }
+
+  body:not(.pdf-mode) .template-19 .bio-row {
+    gap: 10px;
+    font-size: 13px;
+  }
+
+  body:not(.pdf-mode) .template-19 .bio-label {
+    flex: 0 0 130px;
+  }
+}
+
+/* ============================================================
+   FORMAT 20 – FIXED BORDER FULL VISIBLE
+   ============================================================ */
+
+.template-20 .bio-border {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  min-height: 1250px; /* border fully dikhe iss height par */
+
+  background-image: url("format20.jpg");
+  background-size: cover;     /* 👈 contain se border crop ho raha tha */
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Safe area (border touch na ho) */
+  padding: 140px 100px 150px; /* TOP | LEFT/RIGHT | BOTTOM */
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* PDF me same layout (no surprises) */
+body.pdf-mode .template-20 .bio-border {
+  background-size: cover;
+  padding: 140px 100px 150px;
+  min-height: 1250px;
+}
+
+.template-20 .bio-inner {
+  width: 100%;
+  max-width: 85%;
+  margin: 0 auto;
+  font-family: "Century", "Times New Roman", serif;
+  color: #111827;
+}
+
+/* ================= HEADER ================= */
+
+.template-20 .bio-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.template-20 .bio-name {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.template-20 .bio-sub {
+  font-size: 14px;
+  font-style: italic;
+  margin-bottom: 28px;
+}
+
+/* ================= SECTION AREA ================= */
+
+.template-20 .bio-section {
+  margin-bottom: 26px;
+}
+
+.template-20 .bio-section-title {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-bottom: 4px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+}
+
+.template-20 .bio-row {
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.template-20 .bio-label {
+  flex: 0 0 170px;
+  font-weight: 600;
+}
+
+.template-20 .bio-value {
+  flex: 1;
+  white-space: normal;
+  word-break: normal;
+}
+
+/* ================= PHOTO ================= */
+
+.template-20 .bio-main {
+  display: flex;
+  gap: 28px;
+}
+
+.template-20 .bio-main-right {
+  width: 150px;
+}
+
+.template-20 .bio-photo {
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid #000;
+}
+
+/* ================= FOOTER ================= */
+
+.template-20 .bio-footer {
+  margin-top: 34px;
+  text-align: center;
+  font-size: 12px;
+  color: #555;
+}
+
+/* ================= MOBILE ONLY ================= */
+@media(max-width:768px){
+  body:not(.pdf-mode) .template-20 .bio-border {
+    padding: 100px 30px 120px;
+    background-size: cover;
+  }
+}
+
+
+.template-22 .bio-border {
+  border-radius: 18px;
+  padding: 8px;
+  background-color: #fdf5e6;               /* fallback */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow: hidden;
+}
+
+/* ⚠ Text Ganesh ji ke NEECHES se hi start hoga */
+.template-22 .bio-inner {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 230px 56px 90px;   /* top / sides / bottom */
+  font-family: "Source Sans 3", Arial, "Helvetica Neue", sans-serif;
+  color: #3f2a13;
+}
+
+/* "FORMAT 22" chip hide */
+.template-22 .bio-template-chip {
+  display: none !important;
+}
+
+/* ========= HEADER ========= */
+
+.template-22 .bio-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.template-22 .bio-name {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #b45309;                 /* warm golden-brown */
+}
+
+.template-22 .bio-sub {
+  font-size: 13px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* ========= SECTIONS ========= */
+
+.template-22 .bio-section {
+  margin-bottom: 22px;
+}
+
+.template-22 .bio-section-title {
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(180, 83, 9, 0.85);
+  color: #b45309;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 12px;
+}
+
+/* ========= ROWS ========= */
+
+.template-22 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.template-22 .bio-row {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+}
+
+.template-22 .bio-label {
+  flex: 0 0 170px;
+  color: #8b5a2b;
+  font-weight: 600;
+}
+
+.template-22 .bio-value {
+  flex: 1;
+  color: #2b2112;
+  font-weight: 400;
+}
+
+/* ========= PHOTO ========= */
+
+.template-22 .bio-main {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.template-22 .bio-main-left {
+  flex: 1;
+}
+
+.template-22 .bio-main-right {
+  width: 150px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 4px;
+}
+
+.template-22 .bio-photo {
+  border-radius: 14px;
+  border: 2px solid rgba(180, 83, 9, 0.7);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  background: #fff7ed;
+}
+
+/* ========= FOOTER ========= */
+
+.template-22 .bio-footer {
+  margin-top: 24px;
+  font-size: 11px;
+  color: #6b7280;
+  text-align: center;
+}
+
+/* =========================================================
+   MOBILE (sirf normal view ke liye, PDF me desktop layout hi)
+   ========================================================= */
+
+@media (max-width: 768px) {
+  body:not(.pdf-mode) .template-22 .bio-inner {
+    max-width: 100%;
+    padding: 190px 20px 80px; /* thoda kam top/bottom, par Ganesh & mandala se safe */
+  }
+
+  body:not(.pdf-mode) .template-22 .bio-main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  body:not(.pdf-mode) .template-22 .bio-main-right {
+    margin-bottom: 14px;
+  }
+
+  body:not(.pdf-mode) .template-22 .bio-row {
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  body:not(.pdf-mode) .template-22 .bio-label {
+    flex: 0 0 140px;
+  }
+}
+
+/* =========================================================
+   FORMAT 23 – Minimal Ganesha (Text starts below icon)
+   ========================================================= */
+
+.template-23 .bio-border {
+  border-radius: 18px;
+  background-color: #F7EEDD; /* fallback */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow: hidden;
+  padding: 0; 
+}
+
+/* 👇 TEXT ALWAYS STARTS BELOW GANESH JI */
+.template-23 .bio-inner {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 240px 56px 60px; /* Top padding = Ganesha icon height + gap */
+  font-family: "Century", "Libre Baskerville", "Times New Roman", serif;
+  color: #3a3225;
+}
+
+/* Hide Template Chip */
+.template-23 .bio-template-chip {
+  display: none !important;
+}
+
+/* ========= HEADER ========= */
+
+.template-23 .bio-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.template-23 .bio-name {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #8B5E3C;
+}
+
+.template-23 .bio-sub {
+  font-size: 13px;
+  color: #6b665a;
+  font-style: italic;
+}
+
+/* ========= SECTIONS ========= */
+
+.template-23 .bio-section {
+  margin-bottom: 22px;
+}
+
+.template-23 .bio-section-title {
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid #8B5E3C;
+  color: #8B5E3C;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 12px;
+}
+
+/* ========= ROWS ========= */
+
+.template-23 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.template-23 .bio-row {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+}
+
+.template-23 .bio-label {
+  flex: 0 0 170px;
+  color: #8B5E3C;
+  font-weight: 600;
+}
+
+.template-23 .bio-value {
+  flex: 1;
+  color: #3a3225;
+  font-weight: 400;
+}
+
+/* ========= PHOTO ========= */
+
+.template-23 .bio-main {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.template-23 .bio-main-right {
+  width: 150px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 4px;
+}
+
+.template-23 .bio-photo {
+  border-radius: 8px;
+  border: 2px solid #8B5E3C;
+  background: #eee4d4;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
+
+/* ========= FOOTER ========= */
+
+.template-23 .bio-footer {
+  margin-top: 24px;
+  font-size: 11px;
+  color: #7a7163;
+  text-align: center;
+}
+
+/* =========================================================
+   MOBILE VIEW ONLY (PDF me desktop layout hi use hoga)
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  body:not(.pdf-mode) .template-23 .bio-inner {
+    max-width: 100%;
+    padding: 200px 22px 40px; /* slightly less top/bottom */
+  }
+
+  body:not(.pdf-mode) .template-23 .bio-main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  body:not(.pdf-mode) .template-23 .bio-main-right {
+    margin-bottom: 14px;
+  }
+
+  body:not(.pdf-mode) .template-23 .bio-label {
+    flex: 0 0 140px;
+  }
+}
+
+/* =========================================================
+   FORMAT 24 – GANESH JI ROYAL PURPLE FRAME
+   ========================================================= */
+
+.template-24 .bio-border {
+  border-radius: 18px;
+  padding: 8px;
+  background-color: #2b0139;          /* fallback */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow: hidden;
+}
+
+/* 👉 Saara content Ganesh ji ke NEECHES se start hoga */
+.template-24 .bio-inner {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 250px 52px 60px;           /* TOP padding = Ganesh icon + thoda gap */
+  font-family: "Libre Baskerville", "Century", "Times New Roman", serif;
+  color: #fdf2ff;
+}
+
+/* "FORMAT 24" chip chhupa do */
+.template-24 .bio-template-chip {
+  display: none !important;
+}
+
+/* ========= HEADER ========= */
+
+.template-24 .bio-header {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.template-24 .bio-name {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #facc15;                      /* golden */
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+
+.template-24 .bio-sub {
+  font-size: 13px;
+  color: #e5e7eb;
+  font-style: italic;
+}
+
+/* ========= SECTIONS ========= */
+
+.template-24 .bio-section {
+  margin-bottom: 22px;
+}
+
+.template-24 .bio-section-title {
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 999px;
+  background: rgba(43, 1, 57, 0.9);
+  border: 1px solid rgba(250, 204, 21, 0.9);
+  color: #facc15;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 12px;
+}
+
+/* ========= ROWS ========= */
+
+.template-24 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.template-24 .bio-row {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+}
+
+/* Labels – golden, bold */
+.template-24 .bio-label {
+  flex: 0 0 170px;
+  color: #facc15;
+  font-weight: 600;
+}
+
+/* Values – light text */
+.template-24 .bio-value {
+  flex: 1;
+  color: #f9fafb;
+  font-weight: 400;
+}
+
+/* ========= LAYOUT & PHOTO ========= */
+
+.template-24 .bio-main {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.template-24 .bio-main-left {
+  flex: 1;
+}
+
+.template-24 .bio-main-right {
+  width: 150px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 4px;
+  padding-right: 4px;
+}
+
+.template-24 .bio-photo {
+  border-radius: 14px;
+  border: 2px solid rgba(250, 204, 21, 0.7);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.7);
+  background: #1f2933;
+}
+
+/* ========= FOOTER ========= */
+
+.template-24 .bio-footer {
+  margin-top: 24px;
+  font-size: 11px;
+  color: #e5e7eb;
+  text-align: center;
+}
+
+/* =========================================================
+   MOBILE (sirf normal view ke liye, PDF me desktop layout hi)
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  body:not(.pdf-mode) .template-24 .bio-inner {
+    max-width: 100%;
+    padding: 210px 20px 32px;      /* thoda kam top, phir bhi Ganesh se niche */
+  }
+
+  body:not(.pdf-mode) .template-24 .bio-main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  body:not(.pdf-mode) .template-24 .bio-main-right {
+    margin-bottom: 14px;
+    padding-right: 0;
+  }
+
+  body:not(.pdf-mode) .template-24 .bio-row {
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  body:not(.pdf-mode) .template-24 .bio-label {
+    flex: 0 0 140px;
+  }
+}
+
+/* =========================================================
+   FORMAT 25 – MATA JI CLASSIC (Text starts below image)
+   ========================================================= */
+
+.template-25 .bio-border {
+  border-radius: 18px;
+  padding: 0;
+  background-color: #fbf1dd; /* light cream fallback */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow: hidden;
+}
+
+/* 👉 TEXT ALWAYS STARTS BELOW MATA JI IMAGE */
+/* Image JS se aayegi, isliye top padding diya gaya */
+
+.template-25 .bio-inner {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 260px 56px 70px; /* TOP = Mata ji image height + gap */
+  font-family: "Libre Baskerville", "Century", "Times New Roman", serif;
+  color: #3b2a1a; /* dark brown – readable on cream */
+}
+
+/* Hide template chip */
+.template-25 .bio-template-chip {
+  display: none !important;
+}
+
+/* ========= HEADER ========= */
+
+.template-25 .bio-header {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.template-25 .bio-name {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #8b4a1b; /* deep warm brown */
+}
+
+.template-25 .bio-sub {
+  font-size: 13px;
+  color: #6b5a48;
+  font-style: italic;
+}
+
+/* ========= SECTIONS ========= */
+
+.template-25 .bio-section {
+  margin-bottom: 22px;
+}
+
+.template-25 .bio-section-title {
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid #c08a2d; /* golden */
+  color: #8b4a1b;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 12px;
+}
+
+/* ========= ROWS ========= */
+
+.template-25 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.template-25 .bio-row {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+}
+
+.template-25 .bio-label {
+  flex: 0 0 170px;
+  color: #7a3f16; /* darker label */
+  font-weight: 600;
+}
+
+.template-25 .bio-value {
+  flex: 1;
+  color: #3b2a1a;
+  font-weight: 400;
+}
+
+/* ========= PHOTO ========= */
+
+.template-25 .bio-main {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.template-25 .bio-main-left {
+  flex: 1;
+}
+
+.template-25 .bio-main-right {
+  width: 150px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 4px;
+}
+
+.template-25 .bio-photo {
+  border-radius: 12px;
+  border: 2px solid #c08a2d;
+  background: #fff8ec;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+}
+
+/* ========= FOOTER ========= */
+
+.template-25 .bio-footer {
+  margin-top: 24px;
+  font-size: 11px;
+  color: #6b5a48;
+  text-align: center;
+}
+
+/* =========================================================
+   MOBILE VIEW (sirf normal view, PDF desktop jaisa)
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  body:not(.pdf-mode) .template-25 .bio-inner {
+    max-width: 100%;
+    padding: 220px 22px 50px; /* image ke niche safe gap */
+  }
+
+  body:not(.pdf-mode) .template-25 .bio-main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  body:not(.pdf-mode) .template-25 .bio-main-right {
+    margin-bottom: 14px;
+  }
+
+  body:not(.pdf-mode) .template-25 .bio-row {
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  body:not(.pdf-mode) .template-25 .bio-label {
+    flex: 0 0 140px;
+  }
+}
+
+/* =========================================================
+   FORMAT 26 – RED GANESH CLASSIC
+   Text always starts below Ganesh image
+   ========================================================= */
+
+.template-26 .bio-border {
+  border-radius: 18px;
+  padding: 0;
+  background-color: #8b0000; /* deep red fallback */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow: hidden;
+}
+
+/* 👉 TEXT ALWAYS STARTS BELOW GANESH JI */
+/* Ganesh image JS se aayegi, isliye safe top padding */
+
+.template-26 .bio-inner {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 260px 56px 70px; /* Ganesh height + safe gap */
+  font-family: "Libre Baskerville", "Century", "Times New Roman", serif;
+  color: #fff6e5; /* high contrast off-white */
+}
+
+/* Hide template chip */
+.template-26 .bio-template-chip {
+  display: none !important;
+}
+
+/* ========= HEADER ========= */
+
+.template-26 .bio-header {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.template-26 .bio-name {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #f5c77a; /* golden */
+}
+
+.template-26 .bio-sub {
+  font-size: 13px;
+  color: #f3e2c7;
+  font-style: italic;
+}
+
+/* ========= SECTIONS ========= */
+
+.template-26 .bio-section {
+  margin-bottom: 22px;
+}
+
+.template-26 .bio-section-title {
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid #f5c77a;
+  color: #f5c77a;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 12px;
+}
+
+/* ========= ROWS ========= */
+
+.template-26 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.template-26 .bio-row {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+}
+
+.template-26 .bio-label {
+  flex: 0 0 170px;
+  color: #f5c77a; /* golden labels */
+  font-weight: 600;
+}
+
+.template-26 .bio-value {
+  flex: 1;
+  color: #fff6e5;
+  font-weight: 400;
+}
+
+/* ========= PHOTO ========= */
+
+.template-26 .bio-main {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.template-26 .bio-main-left {
+  flex: 1;
+}
+
+.template-26 .bio-main-right {
+  width: 150px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 4px;
+}
+
+.template-26 .bio-photo {
+  border-radius: 12px;
+  border: 2px solid #f5c77a;
+  background: #5a0000;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+/* ========= FOOTER ========= */
+
+.template-26 .bio-footer {
+  margin-top: 24px;
+  font-size: 11px;
+  color: #f3e2c7;
+  text-align: center;
+}
+
+/* =========================================================
+   MOBILE VIEW (normal only, PDF stays desktop)
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  body:not(.pdf-mode) .template-26 .bio-inner {
+    max-width: 100%;
+    padding: 220px 22px 50px; /* Ganesh se clear gap */
+  }
+
+  body:not(.pdf-mode) .template-26 .bio-main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  body:not(.pdf-mode) .template-26 .bio-main-right {
+    margin-bottom: 14px;
+  }
+
+  body:not(.pdf-mode) .template-26 .bio-row {
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  body:not(.pdf-mode) .template-26 .bio-label {
+    flex: 0 0 140px;
+  }
+}
+
+/* =========================================================
+   FORMAT 27 – ISLAMIC FLORAL (Bismillah on top)
+   ========================================================= */
+
+.template-27 .bio-border {
+  border-radius: 18px;
+  padding: 8px;
+  background-color: #fdf9f3;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow: hidden;
+}
+
+/* Safe content area
+   👉 Bismillah ke niche se hi text start hoga */
+.template-27 .bio-inner {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 260px 42px 60px;  /* ⬆ TOP padding bismillah + flowers se niche */
+  font-family: "Lora", "Century", "Times New Roman", serif;
+  color: #1f2933;
+}
+
+/* FORMAT chip hide */
+.template-27 .bio-template-chip {
+  display: none !important;
+}
+
+/* Header */
+.template-27 .bio-header {
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.template-27 .bio-name {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #854d0e;          /* warm brown/gold */
+}
+
+.template-27 .bio-sub {
+  font-size: 13px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* Section headings */
+.template-27 .bio-section {
+  margin-bottom: 18px;
+}
+
+.template-27 .bio-section-title {
+  display: inline-block;
+  padding: 5px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(217, 119, 6, 0.85);
+  color: #b45309;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 10px;
+}
+
+/* Rows */
+.template-27 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.template-27 .bio-row {
+  display: flex;
+  gap: 22px;
+  font-size: 13px;
+}
+
+/* Labels – thoda golden brown */
+.template-27 .bio-label {
+  flex: 0 0 170px;
+  color: #b45309;
+  font-weight: 600;
+}
+
+/* Values – normal dark text */
+.template-27 .bio-value {
+  flex: 1 1 auto;
+  color: #111827;
+  font-weight: 400;
+}
+
+/* Layout + photo */
+.template-27 .bio-main {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.template-27 .bio-main-left {
+  flex: 1;
+}
+
+.template-27 .bio-main-right {
+  width: 150px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 4px;
+  padding-right: 4px;
+}
+
+/* Photo style */
+.template-27 .bio-photo {
+  border: 2px solid rgba(209, 213, 219, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* Footer */
+.template-27 .bio-footer {
+  margin-top: 22px;
+  font-size: 11px;
+  color: #6b7280;
+  text-align: center;
+}
+
+/* =========================
+   Responsive – mobile view
+   (PDF ke time desktop layout hi rahega)
+   ========================= */
+
+@media (max-width: 768px) {
+
+  body:not(.pdf-mode) .template-27 .bio-inner {
+    max-width: 100%;
+    padding: 210px 18px 30px; /* thoda kam top but fir bhi Bismillah ke niche */
+  }
+
+  body:not(.pdf-mode) .template-27 .bio-row {
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  body:not(.pdf-mode) .template-27 .bio-label {
+    flex: 0 0 140px;
+  }
+
+  body:not(.pdf-mode) .template-27 .bio-main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  body:not(.pdf-mode) .template-27 .bio-main-right {
+    margin-bottom: 10px;
+    padding-right: 0;
+  }
+}
+
+/* =========================================================
+   TEMPLATE 28 – ISLAMIC ELEGANT FRAME
+   (Text starts below Bismillah)
+   ========================================================= */
+
+.template-28 .bio-border {
+  border-radius: 18px;
+  padding: 14px;                 /* border se gap */
+  background-color: #ffffff;     /* fallback */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow: hidden;
+}
+
+/* 👉 Safe content area
+   Bismillah ke NEECHES se hi content start */
+.template-28 .bio-inner {
+  max-width: 78%;
+  margin: 0 auto;
+  padding: 240px 40px 60px;      /* TOP = Bismillah + upar ka design */
+  font-family: "Century", "Libre Baskerville", "Times New Roman", serif;
+  color: #3a2f1d;                /* soft dark brown – readable on white */
+}
+
+/* Template chip hide */
+.template-28 .bio-template-chip {
+  display: none !important;
+}
+
+/* ================= HEADER ================= */
+
+.template-28 .bio-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.template-28 .bio-name {
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #8b6a2b;                /* golden brown */
+}
+
+.template-28 .bio-sub {
+  font-size: 13px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* ================= SECTIONS ================= */
+
+.template-28 .bio-section {
+  margin-bottom: 20px;
+}
+
+.template-28 .bio-section-title {
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #c9a24d;
+  color: #8b6a2b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* ================= ROWS ================= */
+
+.template-28 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.template-28 .bio-row {
+  display: flex;
+  gap: 22px;
+  font-size: 13px;
+}
+
+.template-28 .bio-label {
+  flex: 0 0 170px;
+  font-weight: 600;
+  color: #8b6a2b;
+}
+
+.template-28 .bio-value {
+  flex: 1;
+  color: #2f2f2f;
+  font-weight: 400;
+}
+
+/* ================= LAYOUT & PHOTO ================= */
+
+.template-28 .bio-main {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.template-28 .bio-main-left {
+  flex: 1;
+}
+
+.template-28 .bio-main-right {
+  width: 150px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 4px;
+}
+
+/* Photo style (image JS se aayegi) */
+.template-28 .bio-photo {
+  border-radius: 12px;
+  border: 2px solid #d6c28a;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* ================= FOOTER ================= */
+
+.template-28 .bio-footer {
+  margin-top: 22px;
+  font-size: 11px;
+  color: #6b7280;
+  text-align: center;
+}
+
+/* =================================================
+   MOBILE VIEW (normal site only, PDF desktop jaisa)
+   ================================================= */
+
+@media (max-width: 768px) {
+
+  body:not(.pdf-mode) .template-28 .bio-inner {
+    max-width: 100%;
+    padding: 200px 20px 32px;   /* fir bhi Bismillah ke niche */
+  }
+
+  body:not(.pdf-mode) .template-28 .bio-main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  body:not(.pdf-mode) .template-28 .bio-main-right {
+    margin-bottom: 12px;
+  }
+
+  body:not(.pdf-mode) .template-28 .bio-label {
+    flex: 0 0 140px;
+  }
+
+  body:not(.pdf-mode) .template-28 .bio-row {
+    gap: 10px;
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   TEMPLATE 29 – ISLAMIC GOLD FRAME (Full Image Safe)
+   ========================================================= */
+
+.template-29 .bio-border {
+  border-radius: 20px;
+  padding: 18px;                 /* border se safe gap */
+  background-color: #ffffff;     /* fallback */
+  background-size: cover;        /* image JS se aayegi */
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow: hidden;
+}
+
+/* 👉 TEXT Bismillah ke NEECHES se start
+   👉 Border ko kabhi touch nahi karega */
+.template-29 .bio-inner {
+  max-width: 76%;
+  margin: 0 auto;
+  padding: 260px 44px 64px;      /* TOP = bismillah + gold frame safe */
+  font-family: "Century", "Libre Baskerville", "Times New Roman", serif;
+  color: #2f2f2f;                /* dark grey – best readability */
+}
+
+/* Hide template chip */
+.template-29 .bio-template-chip {
+  display: none !important;
+}
+
+/* ================= HEADER ================= */
+
+.template-29 .bio-header {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.template-29 .bio-name {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #8b6a2b;                /* elegant gold */
+}
+
+.template-29 .bio-sub {
+  font-size: 13px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* ================= SECTIONS ================= */
+
+.template-29 .bio-section {
+  margin-bottom: 20px;
+}
+
+.template-29 .bio-section-title {
+  display: inline-block;
+  padding: 6px 22px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid #d6c28a;
+  color: #8b6a2b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* ================= ROWS ================= */
+
+.template-29 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.template-29 .bio-row {
+  display: flex;
+  gap: 22px;
+  font-size: 13px;
+}
+
+.template-29 .bio-label {
+  flex: 0 0 170px;
+  font-weight: 600;
+  color: #8b6a2b;
+}
+
+.template-29 .bio-value {
+  flex: 1;
+  color: #1f2937;
+  font-weight: 400;
+}
+
+/* ================= LAYOUT & PHOTO ================= */
+
+.template-29 .bio-main {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.template-29 .bio-main-left {
+  flex: 1;
+}
+
+.template-29 .bio-main-right {
+  width: 150px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 6px;
+}
+
+/* Photo – JS se aayegi */
+.template-29 .bio-photo {
+  border-radius: 12px;
+  border: 2px solid #d6c28a;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+}
+
+/* ================= FOOTER ================= */
+
+.template-29 .bio-footer {
+  margin-top: 22px;
+  font-size: 11px;
+  color: #6b7280;
+  text-align: center;
+}
+
+/* =================================================
+   MOBILE VIEW (PDF me desktop layout hi rahega)
+   ================================================= */
+
+@media (max-width: 768px) {
+
+  body:not(.pdf-mode) .template-29 .bio-inner {
+    max-width: 100%;
+    padding: 220px 22px 36px;   /* image + bismillah safe */
+  }
+
+  body:not(.pdf-mode) .template-29 .bio-main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  body:not(.pdf-mode) .template-29 .bio-main-right {
+    margin-bottom: 12px;
+  }
+
+  body:not(.pdf-mode) .template-29 .bio-label {
+    flex: 0 0 140px;
+  }
+
+  body:not(.pdf-mode) .template-29 .bio-row {
+    gap: 10px;
+    font-size: 12px;
+  }
+}
+
+
+/* =========================================================
+   TEMPLATE 30 – ISLAMIC GOLD CLASSIC (PDF PERFECT)
+   ========================================================= */
+
+.template-30 .bio-border {
+  padding: 24px;                    /* PDF edge safe */
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;         /* ✅ FULL image visible */
+  box-sizing: border-box;
+}
+
+/* 🔑 TEXT AREA – image ke ANDAR hi rahe */
+.template-30 .bio-inner {
+  max-width: 82%;                   /* ⬅ narrow nahi rahe */
+  margin: 0 auto;
+  padding: 300px 60px 110px;        /* ⬅ Bismillah + bottom border safe */
+  font-family: "Century", "Libre Baskerville", "Times New Roman", serif;
+  color: #2b2b2b;
+  box-sizing: border-box;
+}
+
+/* chip hide */
+.template-30 .bio-template-chip {
+  display: none !important;
+}
+
+/* ================= HEADER ================= */
+
+.template-30 .bio-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.template-30 .bio-name {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #9b7a2f;
+}
+
+.template-30 .bio-sub {
+  font-size: 14px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* ================= SECTIONS ================= */
+
+.template-30 .bio-section {
+  margin-bottom: 26px;
+}
+
+.template-30 .bio-section-title {
+  display: inline-block;
+  padding: 7px 26px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid #d6c28a;
+  color: #9b7a2f;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+/* ================= ROWS ================= */
+
+.template-30 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.template-30 .bio-row {
+  display: flex;
+  gap: 34px;                       /* ⬅ cramped nahi */
+  font-size: 14px;
+}
+
+.template-30 .bio-label {
+  flex: 0 0 190px;                 /* ⬅ better alignment */
+  font-weight: 600;
+  color: #9b7a2f;
+}
+
+.template-30 .bio-value {
+  flex: 1;
+  color: #1f2937;
+  line-height: 1.45;
+}
+
+/* ================= PHOTO ================= */
+
+.template-30 .bio-main {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.template-30 .bio-main-left {
+  flex: 1;
+}
+
+.template-30 .bio-main-right {
+  width: 160px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 10px;
+}
+
+.template-30 .bio-photo {
+  border-radius: 12px;
+  border: 2px solid #d6c28a;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  background: #fff;
+}
+
+/* ================= FOOTER ================= */
+
+.template-30 .bio-footer {
+  margin-top: 34px;
+  font-size: 12px;
+  color: #6b7280;
+  text-align: center;
+}
+
+/* =================================================
+   MOBILE ONLY (PDF MODE ME IGNORE HOTA HAI)
+   ================================================= */
+
+@media (max-width: 768px) {
+  body:not(.pdf-mode) .template-30 .bio-inner {
+    max-width: 100%;
+    padding: 260px 22px 70px;
+  }
+
+  body:not(.pdf-mode) .template-30 .bio-main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  body:not(.pdf-mode) .template-30 .bio-main-right {
+    margin-bottom: 14px;
+  }
+
+  body:not(.pdf-mode) .template-30 .bio-row {
+    gap: 14px;
+    font-size: 13px;
+  }
+
+  body:not(.pdf-mode) .template-30 .bio-label {
+    flex: 0 0 150px;
+  }
+}
+
+/* =========================================================
+   TEMPLATE 31 – ISLAMIC BLUE LANTERN FRAME
+   ========================================================= */
+
+.template-31 .bio-border {
+  border-radius: 18px;
+  padding: 8px;
+  background-color: #ffffff;               /* fallback */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  overflow: hidden;
+}
+
+/* ⚠️ Text sirf safe center area me
+   Top blue arch + lanterns + bottom strip par nahi aayega  */
+.template-31 .bio-inner {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 190px 58px 90px; /* top / sides / bottom */
+  font-family: "Libre Baskerville", "Century", "Times New Roman", serif;
+  color: #0f172a;
+}
+
+/* TEMPLATE chip hide */
+.template-31 .bio-template-chip {
+  display: none !important;
+}
+
+/* ========= HEADER ========= */
+
+.template-31 .bio-header {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.template-31 .bio-name {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0b3b73;        /* deep blue */
+}
+
+.template-31 .bio-sub {
+  font-size: 13px;
+  color: #4b5563;
+  font-style: italic;
+}
+
+/* ========= SECTIONS ========= */
+
+.template-31 .bio-section {
+  margin-bottom: 22px;
+}
+
+.template-31 .bio-section-title {
+  display: inline-block;
+  padding: 6px 20px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(11, 59, 115, 0.9);
+  color: #0b3b73;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 12px;
+}
+
+/* ========= ROWS ========= */
+
+.template-31 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.template-31 .bio-row {
+  display: flex;
+  gap: 24px;
+  font-size: 13px;
+}
+
+.template-31 .bio-label {
+  flex: 0 0 170px;
+  color: #0b3b73;
+  font-weight: 600;
+}
+
+.template-31 .bio-value {
+  flex: 1;
+  color: #111827;
+  font-weight: 400;
+}
+
+/* ========= PHOTO ========= */
+
+.template-31 .bio-main {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.template-31 .bio-main-left {
+  flex: 1;
+}
+
+.template-31 .bio-main-right {
+  width: 150px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 4px;
+}
+
+.template-31 .bio-photo {
+  border-radius: 14px;
+  border: 2px solid rgba(11, 59, 115, 0.75);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.35);
+  background: #ffffff;
+}
+
+/* ========= FOOTER ========= */
+
+.template-31 .bio-footer {
+  margin-top: 24px;
+  font-size: 11px;
+  color: #6b7280;
+  text-align: center;
+}
+
+/* =========================================================
+   MOBILE (sirf normal view ke liye, PDF me desktop layout hi)
+   ========================================================= */
+
+@media (max-width: 768px) {
+  body:not(.pdf-mode) .template-31 .bio-inner {
+    max-width: 100%;
+    padding: 150px 20px 80px;  /* top/bottom kam, par design se safe */
+  }
+
+  body:not(.pdf-mode) .template-31 .bio-main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  body:not(.pdf-mode) .template-31 .bio-main-right {
+    margin-bottom: 14px;
+  }
+
+  body:not(.pdf-mode) .template-31 .bio-row {
+    gap: 10px;
+    font-size: 12px;
+  }
+
+  body:not(.pdf-mode) .template-31 .bio-label {
+    flex: 0 0 140px;
+  }
+}
+
+
+/* =========================================================
+   TEMPLATE 32 – AMBEDKAR GOLD CLASSIC (PIXEL FIXED)
+   ========================================================= */
+
+/* ---------- OUTER FRAME ---------- */
+.template-32 .bio-border {
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 90%;              /* 🔍 zoom-out so photo pura dikhe */
+  padding: 0;
+  overflow: hidden;
+}
+
+/* ---------- RESERVED TOP SPACE FOR LOGO ---------- */
+/* Ye invisible spacer Babasaheb ke liye */
+.template-32 .bio-border::before {
+  content: "";
+  display: block;
+  height: 240px;                     /* 👈 Babasaheb logo height */
+}
+
+/* ---------- CONTENT AREA ---------- */
+.template-32 .bio-inner {
+  max-width: 88%;                    /* ✅ text box lamba */
+  margin: 0 auto;
+  padding: 20px 60px 80px;           /* top kam – kyunki space upar se mil gaya */
+  font-family: "Century", "Libre Baskerville", "Times New Roman", serif;
+  color: #2b2b2b;
+}
+
+/* Template chip hide */
+.template-32 .bio-template-chip {
+  display: none !important;
+}
+
+/* ---------- HEADER ---------- */
+.template-32 .bio-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Name – ek hi line me */
+.template-32 .bio-name {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: #8b6a2e;
+}
+
+/* Subtitle */
+.template-32 .bio-sub {
+  font-size: 13px;
+  font-style: italic;
+  color: #6b7280;
+  margin-top: 6px;
+}
+
+/* ---------- SECTIONS ---------- */
+.template-32 .bio-section {
+  margin-bottom: 22px;
+}
+
+.template-32 .bio-section-title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #8b6a2e;
+  border-bottom: 1px solid #d6b56d;
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+}
+
+/* ---------- ROWS ---------- */
+.template-32 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.template-32 .bio-row {
+  display: flex;
+  gap: 36px;                         /* ✅ zyada gap – readable */
+  font-size: 14px;
+}
+
+/* Labels */
+.template-32 .bio-label {
+  flex: 0 0 200px;                   /* ✅ label column wide */
+  font-weight: 600;
+  color: #8b6a2e;
+}
+
+/* Values */
+.template-32 .bio-value {
+  flex: 1;
+  color: #1f2937;
+  font-weight: 400;
+}
+
+/* ---------- FOOTER ---------- */
+.template-32 .bio-footer {
+  margin-top: 28px;
+  font-size: 11px;
+  color: #6b7280;
+  text-align: center;
+}
+
+/* =========================================================
+   MOBILE (PREVIEW ONLY – PDF SAFE)
+   ========================================================= */
+
+@media (max-width: 768px) {
+  body:not(.pdf-mode) .template-32 .bio-border::before {
+    height: 200px;
+  }
+
+  body:not(.pdf-mode) .template-32 .bio-inner {
+    max-width: 100%;
+    padding: 20px 22px 40px;
+  }
+
+  body:not(.pdf-mode) .template-32 .bio-row {
+    gap: 12px;
+    font-size: 12px;
+  }
+
+  body:not(.pdf-mode) .template-32 .bio-label {
+    flex: 0 0 140px;
+  }
+}
+
+
+/* =========================================================
+   TEMPLATE 33 – BUDDHIST LOTUS CLASSIC
+   Font: Century
+   ========================================================= */
+
+/* ---------- OUTER FRAME ---------- */
+.template-33 .bio-border {
+  background-color: #f9f5d7;           /* fallback */
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: auto;               /* ✅ image original size */
+  padding: 0;
+  overflow: hidden;
+}
+
+/* ---------- RESERVED SPACE FOR BUDDHA IMAGE ---------- */
+/* Buddha photo ke liye fixed invisible space */
+.template-33 .bio-border::before {
+  content: "";
+  display: block;
+  height: 240px;                       /* 👈 Buddha icon height */
+}
+
+/* ---------- CONTENT AREA ---------- */
+/* Text Buddha ke niche se start hoga */
+.template-33 .bio-inner {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 20px 60px 80px;             /* top chhota – space upar se aa gaya */
+  font-family: "Century", "Libre Baskerville", "Times New Roman", serif;
+  color: #3a3a2a;
+}
+
+/* Template chip hide */
+.template-33 .bio-template-chip {
+  display: none !important;
+}
+
+/* ---------- HEADER ---------- */
+.template-33 .bio-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.template-33 .bio-name {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: #7a5c2e;                      /* soft brown-gold */
+}
+
+.template-33 .bio-sub {
+  font-size: 13px;
+  font-style: italic;
+  color: #6b6b5a;
+  margin-top: 6px;
+}
+
+/* ---------- SECTIONS ---------- */
+.template-33 .bio-section {
+  margin-bottom: 22px;
+}
+
+.template-33 .bio-section-title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #7a5c2e;
+  border-bottom: 1px solid rgba(122, 92, 46, 0.45);
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+}
+
+/* ---------- ROWS ---------- */
+.template-33 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.template-33 .bio-row {
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+}
+
+/* Labels */
+.template-33 .bio-label {
+  flex: 0 0 190px;
+  font-weight: 600;
+  color: #7a5c2e;
+}
+
+/* Values */
+.template-33 .bio-value {
+  flex: 1;
+  color: #2f2f2f;
+  font-weight: 400;
+}
+
+/* ---------- FOOTER ---------- */
+.template-33 .bio-footer {
+  margin-top: 28px;
+  font-size: 11px;
+  color: #6b6b5a;
+  text-align: center;
+}
+
+/* =========================================================
+   MOBILE (PREVIEW ONLY – PDF SAFE)
+   ========================================================= */
+
+@media (max-width: 768px) {
+  body:not(.pdf-mode) .template-33 .bio-border::before {
+    height: 200px;
+  }
+
+  body:not(.pdf-mode) .template-33 .bio-inner {
+    max-width: 100%;
+    padding: 20px 22px 40px;
+  }
+
+  body:not(.pdf-mode) .template-33 .bio-row {
+    gap: 12px;
+    font-size: 12px;
+  }
+
+  body:not(.pdf-mode) .template-33 .bio-label {
+    flex: 0 0 140px;
+  }
+}
+
+
+/* =========================================================
+   TEMPLATE 34 – BUDDHIST GREEN ROYAL FRAME
+   Font: Candara
+   ========================================================= */
+
+/* ---------- OUTER FRAME ---------- */
+.template-34 .bio-border {
+  background-color: #5f6f4a;          /* fallback green */
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;           /* ✅ FULL IMAGE – NO CROP */
+  padding: 0;
+  overflow: hidden;
+}
+
+/* ---------- RESERVED SPACE FOR TOP BUDDHA ---------- */
+.template-34 .bio-border::before {
+  content: "";
+  display: block;
+  height: 220px;                      /* 👈 Buddha + top design */
+}
+
+/* ---------- CONTENT AREA ---------- */
+.template-34 .bio-inner {
+  max-width: 88%;                     /* wide text box */
+  margin: 0 auto;
+  padding: 30px 70px 90px;            /* top / sides / bottom */
+  font-family: "Candara", "Century", "Calibri", sans-serif;
+  color: #f5f5e9;                     /* light text on green */
+}
+
+/* Hide template chip */
+.template-34 .bio-template-chip {
+  display: none !important;
+}
+
+/* ---------- HEADER ---------- */
+.template-34 .bio-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.template-34 .bio-name {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: #f3e6a2;                     /* gold text */
+}
+
+.template-34 .bio-sub {
+  font-size: 13px;
+  font-style: italic;
+  color: #e5e5c8;
+  margin-top: 6px;
+}
+
+/* ---------- SECTIONS ---------- */
+.template-34 .bio-section {
+  margin-bottom: 24px;
+}
+
+.template-34 .bio-section-title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #f3e6a2;
+  border-bottom: 1px solid rgba(243, 230, 162, 0.55);
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+}
+
+/* ---------- ROWS ---------- */
+.template-34 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.template-34 .bio-row {
+  display: flex;
+  gap: 40px;
+  font-size: 14px;
+}
+
+/* Labels */
+.template-34 .bio-label {
+  flex: 0 0 230px;                    /* wide label column */
+  font-weight: 600;
+  color: #f3e6a2;
+}
+
+/* Values */
+.template-34 .bio-value {
+  flex: 1;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+/* ---------- FOOTER ---------- */
+.template-34 .bio-footer {
+  margin-top: 30px;
+  font-size: 11px;
+  color: #e5e5c8;
+  text-align: center;
+}
+
+/* =========================================================
+   MOBILE (PREVIEW ONLY – PDF SAFE)
+   ========================================================= */
+
+@media (max-width: 768px) {
+  body:not(.pdf-mode) .template-34 .bio-border::before {
+    height: 190px;
+  }
+
+  body:not(.pdf-mode) .template-34 .bio-inner {
+    max-width: 100%;
+    padding: 26px 24px 40px;
+  }
+
+  body:not(.pdf-mode) .template-34 .bio-row {
+    gap: 14px;
+    font-size: 12px;
+  }
+
+  body:not(.pdf-mode) .template-34 .bio-label {
+    flex: 0 0 150px;
+  }
+}
+
+/* =========================================================
+   TEMPLATE 35 – AMBEDKAR BLUE FRAME (FINAL ALL-IN-ONE)
+   Live Preview + PDF Download SAFE
+   ========================================================= */
+
+.template-35 {
+  position: relative;
+  width: 100%;
+  font-family: "Libre Baskerville", "Century", "Times New Roman", serif;
+
+  /* 🔵 FRAME AS BACKGROUND */
+  background-image: url("ambedkar-blue-frame.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain; /* FULL FRAME – NO CROP */
+}
+
+/* =========================================================
+   SAFE CONTENT AREA (LIVE VIEW)
+   ========================================================= */
+
+.template-35-safe {
+  position: absolute;
+  inset: 0;
+  box-sizing: border-box;
+
+  /* 🔥 FRAME KE HISAB SE PERFECT SAFE PADDING */
+  padding-top: 300px;   /* Ambedkar photo ke niche */
+  padding-left: 90px;   /* blue border left */
+  padding-right: 90px;  /* blue border right */
+  padding-bottom: 90px; /* blue border bottom */
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= CONTENT ================= */
+.template-35 .bio-inner {
+  width: 100%;
+  color: #111827;
+}
+
+/* ================= HEADER ================= */
+.template-35 .bio-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.template-35 .bio-name {
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #1e40af;
+}
+
+.template-35 .bio-sub {
+  font-size: 13px;
+  font-style: italic;
+  color: #374151;
+}
+
+/* ================= SECTIONS ================= */
+.template-35 .bio-section {
+  margin-bottom: 18px;
+}
+
+.template-35 .bio-section-title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #1e40af;
+  border-bottom: 1px solid #1e40af;
+  margin-bottom: 8px;
+}
+
+/* ================= ROWS ================= */
+.template-35 .bio-row {
+  display: flex;
+  gap: 22px;
+  font-size: 13px;
+}
+
+.template-35 .bio-label {
+  flex: 0 0 170px;
+  font-weight: 600;
+  color: #1e40af;
+}
+
+.template-35 .bio-value {
+  flex: 1;
+  color: #111827;
+}
+
+/* ================= FOOTER ================= */
+.template-35 .bio-footer {
+  margin-top: auto;
+  font-size: 11px;
+  text-align: center;
+  color: #6b7280;
+}
+
+/* ================= OPTIONAL BOTTOM TEXT ================= */
+.template-35 .bio-bottom {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.template-35 .bio-bottom-text {
+  font-size: 11px;
+  text-align: center;
+  color: #6b7280;
+  font-weight: bold;
+}
+
+/* =========================================================
+   PDF MODE FIX (MANDATORY FOR DOWNLOAD)
+   ========================================================= */
+
+body.pdf-mode .template-35 {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: contain;
+}
+
+/* 🔥 PDF engines ke liye absolute → relative */
+body.pdf-mode .template-35-safe {
+  position: relative;
+  inset: auto;
+
+  padding-top: 320px;   /* Ambedkar photo ke niche */
+  padding-left: 110px;  /* blue border inside */
+  padding-right: 110px;
+  padding-bottom: 100px;
+
+  box-sizing: border-box;
+}
+
+/* PDF me text kabhi border cross na kare */
+body.pdf-mode .template-35 .bio-inner {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Header overlap fix */
+body.pdf-mode .template-35 .bio-header {
+  margin-top: 0;
+  margin-bottom: 28px;
+}
+
+/* Row spacing stable */
+body.pdf-mode .template-35 .bio-row {
+  gap: 26px;
+  font-size: 13px;
+}
+
+/* Footer bottom safe */
+body.pdf-mode .template-35 .bio-footer {
+  margin-top: 40px;
+  padding-bottom: 10px;
+}
+
+
+/* =========================================================
+   TEMPLATE 36 – DR. AMBEDKAR | BUDDHIST CLASSIC (PDF SAFE)
+   ========================================================= */
+
+.template-36 .bio-border {
+  width: 100%;
+  min-height: 100%;
+  padding: 24px;                         /* image border se safe gap */
+  background-color: #ffffff;             /* fallback */
+  background-size: contain;              /* ✅ FULL image visible */
+  background-repeat: no-repeat;
+  background-position: center top;
+  box-sizing: border-box;
+  overflow: hidden;                      /* text bahar na jaye */
+}
+
+/* 👉 Text hamesha Ambedkar photo ke NEECHES se start */
+.template-36 .bio-inner {
+  max-width: 78%;
+  margin: 0 auto;
+  padding: 260px 48px 80px;               /* ⬆ image + footer safe */
+  font-family: "Century", "Libre Baskerville", "Times New Roman", serif;
+  color: #1f2937;
+}
+
+/* Template chip hide */
+.template-36 .bio-template-chip {
+  display: none !important;
+}
+
+/* ================= HEADER ================= */
+
+.template-36 .bio-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.template-36 .bio-name {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #1e3a8a; /* Ambedkar blue */
+}
+
+.template-36 .bio-sub {
+  font-size: 14px;
+  color: #475569;
+  font-style: italic;
+}
+
+/* ================= SECTIONS ================= */
+
+.template-36 .bio-section {
+  margin-bottom: 24px;
+}
+
+.template-36 .bio-section-title {
+  display: inline-block;
+  padding: 6px 22px;
+  border-radius: 999px;
+  background: #f8fafc;
+  border: 1px solid #1e3a8a;
+  color: #1e3a8a;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+/* ================= ROWS ================= */
+
+.template-36 .bio-section-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.template-36 .bio-row {
+  display: flex;
+  gap: 26px;
+  font-size: 14px;
+  align-items: flex-start;
+}
+
+.template-36 .bio-label {
+  flex: 0 0 170px;
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
+.template-36 .bio-value {
+  flex: 1;
+  color: #111827;
+  word-break: break-word;
+}
+
+/* ================= PHOTO ================= */
+
+.template-36 .bio-main {
+  display: flex;
+  gap: 26px;
+  align-items: flex-start;
+}
+
+.template-36 .bio-main-left {
+  flex: 1;
+}
+
+.template-36 .bio-main-right {
+  width: 150px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 6px;
+}
+
+.template-36 .bio-photo {
+  border-radius: 10px;
+  border: 2px solid #1e3a8a;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+/* ================= FOOTER ================= */
+
+.template-36 .bio-footer {
+  margin-top: 26px;
+  font-size: 12px;
+  color: #475569;
+  text-align: center;
+}
+
+/* =================================================
+   MOBILE VIEW (PDF always desktop layout)
+   ================================================= */
+
+@media (max-width: 768px) {
+
+  body:not(.pdf-mode) .template-36 .bio-inner {
+    max-width: 100%;
+    padding: 220px 22px 60px;
+  }
+
+  body:not(.pdf-mode) .template-36 .bio-main {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  body:not(.pdf-mode) .template-36 .bio-main-right {
+    margin-bottom: 12px;
+  }
+
+  body:not(.pdf-mode) .template-36 .bio-row {
+    gap: 12px;
+    font-size: 13px;
+  }
+
+  body:not(.pdf-mode) .template-36 .bio-label {
+    flex: 0 0 140px;
+  }
+}

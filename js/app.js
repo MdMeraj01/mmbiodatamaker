@@ -27,6 +27,8 @@ function updatePreview(customState = {}) {
   const data = collectFormData();
   const html = renderPreviewHtml(data);
   previewArea.innerHTML = html;
+
+  setTimeout(fitPreviewToContainer, 200);
   
   applyTemplateBackground();
 
@@ -130,6 +132,17 @@ function collectFormData(){
 window.uploadedPhotoDataUrl = null;
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Hide Preloader when window loads
+  window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+      // Thoda delay taaki animation dikhe
+      setTimeout(() => {
+        preloader.classList.add('loaded');
+      }, 800);
+    }
+  });
+
   // --- elements ---
   const templatesGrid = document.getElementById('templatesGrid');
   const religionBtns = document.querySelectorAll('.religion');
@@ -153,6 +166,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
   const mainNav = document.querySelector('.main-nav');
   const themeSwitch = document.getElementById('themeSwitch');
+
+
 
   // --- 1. DATA DEFINITION (Moved to Top to fix crash) ---
     const templates = [
@@ -184,6 +199,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupFormActions();
   renderPhotoFormats(12);
   renderTemplates(); // Now safe to call
+  updateProgressBar()
   
   // Mobile menu toggle
   if (mobileMenuBtn) {
@@ -1131,12 +1147,16 @@ function renderPreviewHtml(data) {
             </div>
           </div>
 
-          <footer class="bio-footer">
+          <footer class="bio-footer" style="text-align: center; margin-top: 20px; font-size: 12px; color: #666;">
             Generated on ${new Date().toLocaleDateString('en-IN', {
               day: '2-digit',
               month: 'short',
               year: 'numeric',
-            })} via BiodataMaker.in
+            })} via 
+            <a href="https://mmbiodatamaker.netlify.app/" target="_blank" rel="noopener noreferrer" 
+               style="color: #2563eb; text-decoration: none; font-weight: bold;">
+              mmbiodatamaker.netlify.app
+            </a>
           </footer>
         </div>
       </div>
@@ -1240,3 +1260,218 @@ function prepareForPdf(element) {
   
   return clone;
 }
+
+
+/* =========================================
+   SCROLL ANIMATION LOGIC
+   ========================================= */
+document.addEventListener('DOMContentLoaded', () => {
+  
+  // 1. Kin elements par animation lagana hai?
+  // Hum in classes ko target kar rahe hain:
+  const targetClasses = [
+    '.step-new',          // How to create steps
+    '.template-card',     // Templates
+    '.faq-q',             // FAQ items
+    '.feature-item',      // Hero section features
+    '.importance-point-new', // Text points
+    '.review-card',       // Reviews (agar hain to)
+    '.format-photo-card', // Photo formats
+    '.hero-stats',        // Stats box
+    '.contact-grid'       // Contact section
+  ];
+
+  // 2. Sabhi elements ko select karke 'reveal-on-scroll' class do
+  const elementsToAnimate = document.querySelectorAll(targetClasses.join(','));
+  
+  elementsToAnimate.forEach(el => {
+    el.classList.add('reveal-on-scroll');
+  });
+
+  // 3. Intersection Observer (Scroll Detector)
+  const observerOptions = {
+    threshold: 0.1, // Jab 10% element dikhe tab animation start ho
+    rootMargin: "0px 0px -50px 0px" // Thoda upar aane par trigger ho
+  };
+
+  const scrollObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Class add karo taaki element upar aaye
+        entry.target.classList.add('active');
+        
+        // Ek baar animation ho gaya to observer hata do (Performance ke liye)
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // 4. Har element par observer lagao
+  elementsToAnimate.forEach(el => {
+    scrollObserver.observe(el);
+  });
+});
+
+/* =========================================
+   AUTO-SAVE & RESTORE (Data Loss Protection)
+   ========================================= */
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('biodataForm');
+  if (!form) return;
+
+  // 1. Restore Data on Page Load
+  const restoreData = () => {
+    const inputs = form.querySelectorAll('input, select, textarea');
+    let hasRestored = false;
+
+    inputs.forEach(input => {
+      // Sirf wo fields jo user bharta hai (files chhod kar)
+      if (input.type !== 'file' && input.id) {
+        const savedValue = localStorage.getItem('bio_draft_' + input.id);
+        if (savedValue) {
+          input.value = savedValue;
+          hasRestored = true;
+        }
+      }
+    });
+
+    if (hasRestored) {
+      // Agar data wapas aaya hai to preview bhi update karo
+      if(typeof updatePreview === 'function') updatePreview();
+      // User ko batao
+      if(typeof showToast === 'function') showToast('Draft restored from last session');
+    }
+  };
+
+  // 2. Save Data on Input
+  form.addEventListener('input', (e) => {
+    if (e.target.id && e.target.type !== 'file') {
+      localStorage.setItem('bio_draft_' + e.target.id, e.target.value);
+    }
+  });
+
+  // 3. Clear Data on "Clear Form" or Success
+  const clearBtn = document.getElementById('clearFormBtn');
+  if (clearBtn) {
+    clearBtn.addEventListener('click', () => {
+      // Local storage saaf karo
+      const inputs = form.querySelectorAll('input, select, textarea');
+      inputs.forEach(input => {
+        if(input.id) localStorage.removeItem('bio_draft_' + input.id);
+      });
+    });
+  }
+
+  // Run Restore
+  restoreData();
+});
+
+
+/* =========================================
+   CONFETTI CELEBRATION ON DOWNLOAD
+   ========================================= */
+document.addEventListener('DOMContentLoaded', () => {
+  const downloadBtn = document.getElementById('downloadPdfBtn');
+  const payDownloadBtn = document.getElementById('payDownloadBtn'); // Agar pay button hai
+
+  function triggerConfetti() {
+    // School Magic Effect
+    var duration = 3 * 1000;
+    var animationEnd = Date.now() + duration;
+    var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 99999 };
+
+    function randomInOut(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    var interval = setInterval(function() {
+      var timeLeft = animationEnd - Date.now();
+
+      if (timeLeft <= 0) {
+        return clearInterval(interval);
+      }
+
+      var particleCount = 50 * (timeLeft / duration);
+      
+      // Do jagah se confetti niklega (Left & Right)
+      confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInOut(0.1, 0.3), y: Math.random() - 0.2 } }));
+      confetti(Object.assign({}, defaults, { particleCount, origin: { x: randomInOut(0.7, 0.9), y: Math.random() - 0.2 } }));
+    }, 250);
+  }
+
+  if(downloadBtn) {
+    downloadBtn.addEventListener('click', triggerConfetti);
+  }
+  if(payDownloadBtn) {
+    payDownloadBtn.addEventListener('click', triggerConfetti);
+  }
+});
+
+ /* =========================================
+   LIVE PREVIEW SCALER (Disabled for now)
+   ========================================= */
+function fitPreviewToContainer() {
+  // Ab side preview nahi hai, to scaling ki zarurat nahi.
+  // Ye function khali chhod diya taaki koi error na aaye.
+  return; 
+}
+
+// Resize listener bhi hata sakte ho, ya aise hi rehne do, koi issue nahi.
+
+// Window resize hone par dobara calculate karo
+window.addEventListener('resize', fitPreviewToContainer);
+
+// Window resize hone par dobara calculate karo
+window.addEventListener('resize', () => {
+    requestAnimationFrame(fitPreviewToContainer);
+});
+
+// Window resize hone par dobara calculate karo
+window.addEventListener('resize', fitPreviewToContainer);
+
+/* =========================================
+   PROGRESS BAR LOGIC
+   ========================================= */
+function updateProgressBar() {
+  const form = document.getElementById('biodataForm');
+  if(!form) return;
+
+  const inputs = form.querySelectorAll('input, select, textarea');
+  let total = 0;
+  let filled = 0;
+
+  inputs.forEach(input => {
+    // Hidden aur Buttons ko count mat karo
+    if(input.type !== 'hidden' && input.type !== 'button' && input.type !== 'submit') {
+      total++;
+      if(input.value.trim() !== '') {
+        filled++;
+      }
+    }
+  });
+
+  const percentage = Math.round((filled / total) * 100);
+  
+  const bar = document.getElementById('progressBar');
+  const text = document.getElementById('progressText');
+  
+  if(bar && text) {
+    bar.style.width = `${percentage}%`;
+    text.textContent = `${percentage}%`;
+    
+    // Color change based on progress
+    if(percentage < 30) bar.style.background = '#ef4444'; // Red
+    else if(percentage < 70) bar.style.background = '#eab308'; // Yellow
+    else bar.style.background = '#22c55e'; // Green
+  }
+}
+
+// Event Listeners add karo
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('biodataForm');
+  if(form) {
+    form.addEventListener('input', updateProgressBar);
+    // Initial call (agar auto-save data hai to)
+    setTimeout(updateProgressBar, 500);
+  }
+});

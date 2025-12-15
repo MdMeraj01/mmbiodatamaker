@@ -1,4 +1,4 @@
-// pdf.js – Single PDF flow for all formats (1,2,...)
+ // pdf.js – Single PDF flow for all formats (High Quality + Clickable Link Fix)
 // Uses: html2canvas + jsPDF loaded lazily
 
 let pdfLibPromise = null;
@@ -43,7 +43,7 @@ function loadPdfLibraries() {
   return pdfLibPromise;
 }
 
-// ---------- MAIN PDF FUNCTION (sab formats ke liye) ----------
+// ---------- MAIN PDF FUNCTION ----------
 async function generateAndDownloadPdf(data) {
   await loadPdfLibraries();
 
@@ -66,54 +66,75 @@ async function generateAndDownloadPdf(data) {
     return;
   }
 
-  // PDF mode ON -> mobile CSS override nahi lagega
+  // PDF mode ON
   document.body.classList.add("pdf-mode");
 
-  // off-screen wrapper
+  // --- STEP 1: CLONE & RESET SCALE (Quality Fix) ---
+  // Preview me card chhota (scaled) ho sakta hai, par PDF me full size chahiye.
   const wrapper = document.createElement("div");
   wrapper.style.position = "absolute";
   wrapper.style.left = "-9999px";
   wrapper.style.top = "0";
-  wrapper.style.background = "transparent";
-  wrapper.style.width = "794px";  // approx A4 width @96dpi
-  wrapper.style.padding = "0";
-  wrapper.style.margin = "0";
+  wrapper.style.width = "794px";  // A4 Width Fix
   wrapper.style.zIndex = "-1";
 
   const clone = card.cloneNode(true);
-  clone.style.margin = "0 auto";
+  
+  // IMPORTANT: Scaling hatao taaki PDF dhundhla na ho
+  clone.style.transform = "none"; 
+  clone.style.margin = "0";
+  clone.style.width = "100%";
+  clone.style.boxShadow = "none";
+  
   wrapper.appendChild(clone);
   document.body.appendChild(wrapper);
 
   try {
-    showToast("Preparing PDF...");
+    showToast("Preparing High Quality PDF...");
 
+    // --- STEP 2: CAPTURE IMAGE ---
     const canvas = await html2canvas(wrapper, {
-      scale: 2,
+      scale: 2, // 2x Quality
       useCORS: true,
       logging: false,
-      scrollX: 0,
-      scrollY: 0
+      backgroundColor: "#ffffff" // Transparent background issue fix
     });
 
-    const imgData = canvas.toDataURL("image/jpeg", 0.98);
+    const imgData = canvas.toDataURL("image/jpeg", 0.95);
 
     const pdf = new jsPDF("p", "mm", "a4");
-    const pageWidth = pdf.internal.pageSize.getWidth();
-    const pageHeight = pdf.internal.pageSize.getHeight();
+    const pageWidth = pdf.internal.pageSize.getWidth();   // 210mm
+    const pageHeight = pdf.internal.pageSize.getHeight(); // 297mm
 
-    // image ko page me fit karo without stretch
+    // Image Dimensions Calculation
     const pxWidth = canvas.width;
     const pxHeight = canvas.height;
 
+    // Aspect Ratio maintain karte hue fit karo
     const ratio = Math.min(pageWidth / pxWidth, pageHeight / pxHeight);
     const imgWidth = pxWidth * ratio;
     const imgHeight = pxHeight * ratio;
 
+    // Center Align Calculation
     const marginX = (pageWidth - imgWidth) / 2;
     const marginY = (pageHeight - imgHeight) / 2;
 
+    // PDF me Image dalo
     pdf.addImage(imgData, "JPEG", marginX, marginY, imgWidth, imgHeight, "", "FAST");
+
+    // --- STEP 3: CLICKABLE LINK MATHS (The Fix) ---
+    // Link ko image ke bottom hisse par chipkana hai
+    
+    // Footer ki height approx 15mm hoti hai
+    const footerHeight = 15; 
+    
+    // Calculate Y Position: Jahan Image shuru hui + Image ki Height - Footer Height
+    const linkY = marginY + imgHeight - footerHeight;
+
+    // Link add karo (Invisible Clickable Box)
+    pdf.link(marginX, linkY, imgWidth, footerHeight, { url: "https://mmbiodatamaker.netlify.app/" });
+
+    // ----------------------------------------------
 
     const safeName = (data.name || "user").replace(/\s+/g, "_").toLowerCase();
     const ymd = new Date().toISOString().split("T")[0].replace(/-/g, "");
@@ -212,6 +233,52 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // optional global
   window.generateAndDownloadPdf = generateAndDownloadPdf;
+});
+
+/* =========================================
+   PROGRESS BAR LOGIC
+   ========================================= */
+function updateProgressBar() {
+  const form = document.getElementById('biodataForm');
+  if(!form) return;
+
+  const inputs = form.querySelectorAll('input, select, textarea');
+  let total = 0;
+  let filled = 0;
+
+  inputs.forEach(input => {
+    // Hidden aur Buttons ko count mat karo
+    if(input.type !== 'hidden' && input.type !== 'button' && input.type !== 'submit') {
+      total++;
+      if(input.value.trim() !== '') {
+        filled++;
+      }
+    }
+  });
+
+  const percentage = Math.round((filled / total) * 100);
+  
+  const bar = document.getElementById('progressBar');
+  const text = document.getElementById('progressText');
+  
+  if(bar && text) {
+    bar.style.width = `${percentage}%`;
+    text.textContent = `${percentage}%`;
+    
+    // Color change based on progress
+    if(percentage < 30) bar.style.background = '#ef4444'; // Red
+    else if(percentage < 70) bar.style.background = '#eab308'; // Yellow
+    else bar.style.background = '#22c55e'; // Green
+  }
+}
+
+// Event Listeners add karo
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('biodataForm');
+  if(form) {
+    form.addEventListener('input', updateProgressBar);
+    // Initial call (agar auto-save data hai to)
+    setTimeout(updateProgressBar, 500);
+  }
 });

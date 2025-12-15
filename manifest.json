@@ -1,0 +1,21 @@
+{
+  "name": "Wedding Biodata Maker",
+  "short_name": "Biodata Maker",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#be185d",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "images/favicon 2.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/favicon 2.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

@@ -376,7 +376,7 @@ body {
 .hero-wrapper {
   background:
     linear-gradient(to right, rgba(255,255,255,0.95) 30%, rgba(255,255,255,0.8) 100%),
-    url('../images/home.png');
+    url('../images/home.webp');
   background-size: cover;
   background-position: center top;
   padding: 80px 0 100px;
@@ -388,7 +388,7 @@ body {
 [data-theme="dark"] .hero-wrapper {
   background:
     linear-gradient(to right, rgba(15, 23, 42, 0.95) 30%, rgba(15, 23, 42, 0.8) 100%),
-    url('../images/home.png');
+    url('../images/home.webp');
   border-bottom: 1px solid rgba(255,90,143,0.2);
 }
 
@@ -1808,7 +1808,7 @@ body.preview-mode .preview-column {
 [data-theme="dark"] .hero-wrapper {
   background:
     linear-gradient(to right, rgba(15, 23, 42, 0.95) 30%, rgba(15, 23, 42, 0.8) 100%),
-    url('../images/home.png');
+    url('../images/home.webp');
 }
 
 [data-theme="dark"] .hero h1 {

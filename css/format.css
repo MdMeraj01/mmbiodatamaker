@@ -2082,7 +2082,7 @@
 
 /* Background Image Apply */
 .template-14 .bio-border {
-  background-image: url("format14.jpg");
+  background-image: url("format14.webp");
 }
 
 /* Hide Template Chip */
@@ -2213,7 +2213,7 @@
 .template-15 .bio-border {
   border-radius: 12px;
   background-color: #ffffff;           /* fallback */
-  background-image: url("format15.jpg");
+  background-image: url("format15.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
@@ -2361,7 +2361,7 @@
 .template-16 .bio-border {
   border-radius: 12px;
   background-color: #ffffff;      /* fallback white */
-  background-image: url("format16.jpg");
+  background-image: url("format16.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
@@ -2504,7 +2504,7 @@
 /* Outer A4 card which carries the background image */
 .template-17 .bio-border {
   /* full background image – no cropping */
-  background: #fce4ef url("format17.jpg") no-repeat center top;
+  background: #fce4ef url("format17.webp") no-repeat center top;
   background-size: 100% 100%;      /* pura photo 100% width/height */
   border-radius: 0;                /* frame ko crop na kare; chahe to 8px bhi rakh sakte ho */
   padding: 0;                      /* padding inner box me hoga */
@@ -3152,7 +3152,7 @@ body.pdf-mode .template-19 .bio-inner {
   margin: 0 auto;
   min-height: 1250px; /* border fully dikhe iss height par */
 
-  background-image: url("format20.jpg");
+  background-image: url("format20.webp");
   background-size: cover;     /* 👈 contain se border crop ho raha tha */
   background-position: center;
   background-repeat: no-repeat;
@@ -5293,7 +5293,7 @@ body.pdf-mode .template-20 .bio-border {
   font-family: "Libre Baskerville", "Century", "Times New Roman", serif;
 
   /* 🔵 FRAME AS BACKGROUND */
-  background-image: url("ambedkar-blue-frame.jpg");
+  background-image: url("ambedkar-blue-frame.webp");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: contain; /* FULL FRAME – NO CROP */

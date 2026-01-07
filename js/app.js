@@ -171,23 +171,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- 1. DATA DEFINITION (Moved to Top to fix crash) ---
     const templates = [
-    { id:'t1', title:'Classic Clean',  desc:'Simple, formal layout with clear sections',          rel:'all',     img:'images/format1.jpg', cssId:'21' },
-    { id:'t2', title:'Modern Pink',    desc:'Modern boxed style with accent color',               rel:'hindu',   img:'images/hindu-temp1.jpg', cssId:'22' },
-    { id:'t3', title:'Modern Pink',    desc:'Modern boxed style with accent color',               rel:'hindu',   img:'images/hindu-temp2.jpg', cssId:'23' },
-    { id:'t4', title:'Modern Pink',    desc:'Modern boxed style with accent color',               rel:'hindu',   img:'images/hindu-temp3.jpg', cssId:'24' },
-    { id:'t5', title:'Modern Pink',    desc:'Modern boxed style with accent color',               rel:'hindu',   img:'images/hindu-temp4.jpg', cssId:'25' },
-    { id:'t6', title:'Modern Pink',    desc:'Modern boxed style with accent color',               rel:'hindu',   img:'images/hindu-temp5.jpg', cssId:'26' },
-    { id:'t7', title:'Elegant Minimal',desc:'Minimal two-column design',                          rel:'muslim',  img:'images/muslim-temp1.jpg', cssId:'27' },
-    { id:'t8', title:'Elegant Minimal',desc:'Minimal two-column design',                          rel:'muslim',  img:'images/muslim-temp2.jpg', cssId:'28' },
-    { id:'t9', title:'Elegant Minimal',desc:'Minimal two-column design',                          rel:'muslim',  img:'images/muslim-temp3.jpg', cssId:'29' },
-    { id:'t10', title:'Elegant Minimal',desc:'Minimal two-column design',                          rel:'muslim',  img:'images/muslim-temp4.jpg', cssId:'30' },
-    { id:'t11', title:'Elegant Minimal',desc:'Minimal two-column design',                          rel:'muslim',  img:'images/muslim-temp5.jpg', cssId:'31' },
-    { id:'t12', title:'Light & Airy',   desc:'Spacious layout and modern fonts',                   rel:'buddhist',img:'images/buddhist-temp1.jpg', cssId:'32' },
-    { id:'t13', title:'Light & Airy',   desc:'Spacious layout and modern fonts',                   rel:'buddhist',img:'images/buddhist-temp2.jpg', cssId:'33' },
-    { id:'t14', title:'Light & Airy',   desc:'Spacious layout and modern fonts',                   rel:'buddhist',img:'images/buddhist-temp3.jpg', cssId:'34' },
-    { id:'t15', title:'Light & Airy',   desc:'Spacious layout and modern fonts',                   rel:'buddhist',img:'images/buddhist-temp4.jpg', cssId:'35' },
-    { id:'t16', title:'Light & Airy',   desc:'Spacious layout and modern fonts',                   rel:'buddhist',img:'images/buddhist-temp5.jpg', cssId:'36' },
-    { id:'t17', title:'Classic Mono',   desc:'Monochrome professional style',                      rel:'other',   img:'template8.jpg', cssId:'37' }
+    { id:'t1', title:'Classic Clean',  desc:'Simple, formal layout with clear sections',          rel:'all',     img:'images/format1.webp', cssId:'21' },
+    { id:'t2', title:'Modern Pink',    desc:'Modern boxed style with accent color',               rel:'hindu',   img:'images/hindu-temp1.webp', cssId:'22' },
+    { id:'t3', title:'Modern Pink',    desc:'Modern boxed style with accent color',               rel:'hindu',   img:'images/hindu-temp2.webp', cssId:'23' },
+    { id:'t4', title:'Modern Pink',    desc:'Modern boxed style with accent color',               rel:'hindu',   img:'images/hindu-temp3.webp', cssId:'24' },
+    { id:'t5', title:'Modern Pink',    desc:'Modern boxed style with accent color',               rel:'hindu',   img:'images/hindu-temp4.webp', cssId:'25' },
+    { id:'t6', title:'Modern Pink',    desc:'Modern boxed style with accent color',               rel:'hindu',   img:'images/hindu-temp5.webp', cssId:'26' },
+    { id:'t7', title:'Elegant Minimal',desc:'Minimal two-column design',                          rel:'muslim',  img:'images/muslim-temp1.webp', cssId:'27' },
+    { id:'t8', title:'Elegant Minimal',desc:'Minimal two-column design',                          rel:'muslim',  img:'images/muslim-temp2.webp', cssId:'28' },
+    { id:'t9', title:'Elegant Minimal',desc:'Minimal two-column design',                          rel:'muslim',  img:'images/muslim-temp3.webp', cssId:'29' },
+    { id:'t10', title:'Elegant Minimal',desc:'Minimal two-column design',                          rel:'muslim',  img:'images/muslim-temp4.webp', cssId:'30' },
+    { id:'t11', title:'Elegant Minimal',desc:'Minimal two-column design',                          rel:'muslim',  img:'images/muslim-temp5.webp', cssId:'31' },
+    { id:'t12', title:'Light & Airy',   desc:'Spacious layout and modern fonts',                   rel:'buddhist',img:'images/buddhist-temp1.webp', cssId:'32' },
+    { id:'t13', title:'Light & Airy',   desc:'Spacious layout and modern fonts',                   rel:'buddhist',img:'images/buddhist-temp2.webp', cssId:'33' },
+    { id:'t14', title:'Light & Airy',   desc:'Spacious layout and modern fonts',                   rel:'buddhist',img:'images/buddhist-temp3.webp', cssId:'34' },
+    { id:'t15', title:'Light & Airy',   desc:'Spacious layout and modern fonts',                   rel:'buddhist',img:'images/buddhist-temp4.webp', cssId:'35' },
+    { id:'t16', title:'Light & Airy',   desc:'Spacious layout and modern fonts',                   rel:'buddhist',img:'images/buddhist-temp5.webp', cssId:'36' },
+    { id:'t17', title:'Classic Mono',   desc:'Monochrome professional style',                      rel:'other',   img:'template8.webp', cssId:'37' }
   ];
 
   // --- 2. INITIALIZATION ---
@@ -701,7 +701,7 @@ function renderPhotoFormats(count = 12) {
   formatsGrid.innerHTML = '';
 
   for (let i = 1; i <= count; i++) {
-    const imgSrc = `images/format${i}.jpg`;   // format1.jpg, format2.jpg ...
+    const imgSrc = `images/format${i}.webp`;   // format1.jpg, format2.jpg ...
 
     const card = document.createElement('div');
     card.className = 'format-photo-card';

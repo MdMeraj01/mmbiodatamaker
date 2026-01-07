@@ -100,7 +100,7 @@ async function generateAndDownloadPdf(data) {
       backgroundColor: "#ffffff" // Transparent background issue fix
     });
 
-    const imgData = canvas.toDataURL("image/jpeg", 0.95);
+    const imgData = canvas.toDataURL("image/webp", 0.95);
 
     const pdf = new jsPDF("p", "mm", "a4");
     const pageWidth = pdf.internal.pageSize.getWidth();   // 210mm
@@ -120,7 +120,7 @@ async function generateAndDownloadPdf(data) {
     const marginY = (pageHeight - imgHeight) / 2;
 
     // PDF me Image dalo
-    pdf.addImage(imgData, "JPEG", marginX, marginY, imgWidth, imgHeight, "", "FAST");
+    pdf.addImage(imgData, "webp", marginX, marginY, imgWidth, imgHeight, "", "FAST");
 
     // --- STEP 3: CLICKABLE LINK MATHS (The Fix) ---
     // Link ko image ke bottom hisse par chipkana hai
@@ -234,51 +234,4 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   window.generateAndDownloadPdf = generateAndDownloadPdf;
-});
-
-/* =========================================
-   PROGRESS BAR LOGIC
-   ========================================= */
-function updateProgressBar() {
-  const form = document.getElementById('biodataForm');
-  if(!form) return;
-
-  const inputs = form.querySelectorAll('input, select, textarea');
-  let total = 0;
-  let filled = 0;
-
-  inputs.forEach(input => {
-    // Hidden aur Buttons ko count mat karo
-    if(input.type !== 'hidden' && input.type !== 'button' && input.type !== 'submit') {
-      total++;
-      if(input.value.trim() !== '') {
-        filled++;
-      }
-    }
-  });
-
-  const percentage = Math.round((filled / total) * 100);
-  
-  const bar = document.getElementById('progressBar');
-  const text = document.getElementById('progressText');
-  
-  if(bar && text) {
-    bar.style.width = `${percentage}%`;
-    text.textContent = `${percentage}%`;
-    
-    // Color change based on progress
-    if(percentage < 30) bar.style.background = '#ef4444'; // Red
-    else if(percentage < 70) bar.style.background = '#eab308'; // Yellow
-    else bar.style.background = '#22c55e'; // Green
-  }
-}
-
-// Event Listeners add karo
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('biodataForm');
-  if(form) {
-    form.addEventListener('input', updateProgressBar);
-    // Initial call (agar auto-save data hai to)
-    setTimeout(updateProgressBar, 500);
-  }
 });

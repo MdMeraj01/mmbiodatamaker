@@ -55,7 +55,7 @@ body.pdf-mode .biodata-template .bio-border {
    - decorative border at edges, we need big inner padding
    =========================== */
 .template-2 .bio-border {
-  background-image: url('images/format2.jpg');
+  background-image: url('images/format2.webp');
   --bio-padding-top: 110px;
   --bio-padding-x: 48px;
   --bio-padding-bottom: 64px;
@@ -65,7 +65,7 @@ body.pdf-mode .biodata-template .bio-border {
 
 /* Template 3 (format3.jpg) example */
 .template-3 .bio-border {
-  background-image: url('images/format3.jpg');
+  background-image: url('images/format3.webp');
   --bio-padding-top: 90px;
   --bio-padding-x: 44px;
   --bio-padding-bottom: 70px;
@@ -75,7 +75,7 @@ body.pdf-mode .biodata-template .bio-border {
 
 /* Template 4 (dark bg) - we need light text & center photo */
 .template-4 .bio-border {
-  background-image: url('images/format4.jpg');
+  background-image: url('images/format4.webp');
   --bio-padding-top: 120px;
   --bio-padding-x: 34px;
   --bio-padding-bottom: 80px;
@@ -86,7 +86,7 @@ body.pdf-mode .biodata-template .bio-border {
 
 /* Template 19 (example you asked) — clean, show full image */
 .template-19 .bio-border {
-  background-image: url('images/format19.jpg');
+  background-image: url('images/format19.webp');
   --bio-padding-top: 100px;
   --bio-padding-x: 56px;
   --bio-padding-bottom: 120px;

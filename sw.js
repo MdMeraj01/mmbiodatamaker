@@ -6,7 +6,7 @@ const ASSETS = [
   "./css/format.css",
   "./js/app.js",
   "./js/pdf.js",
-  "./images/favicon 2.png"
+  "./images/favicon.webp"
 ];
 
 // Install Event

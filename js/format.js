@@ -9,7 +9,7 @@ window.BIODATA_TEMPLATES["2"] = {
   key: "green-elegant",
   displayName: "Format 2 – Green Elegant",
   primaryColor: "#15803d",
-  borderImage: "format2.jpg",
+  borderImage: "format2.webp",
   description: "Clean white background with classic green ornamental border."
 };
 
@@ -39,7 +39,7 @@ window.BIODATA_TEMPLATES["2"] = {
   key: "green-elegant",
   displayName: "Format 2 – Green Elegant",
   primaryColor: "#16a34a",
-  borderImage: "format2.jpg",
+  borderImage: "format2.webp",
   description: "Clean white page with classic green ornamental border."
 };
 
@@ -48,7 +48,7 @@ window.BIODATA_TEMPLATES["3"] = {
   key: "blue-royal",
   displayName: "Format 3 – Blue Royal",
   primaryColor: "#1d4ed8",
-  borderImage: "format3.jpg",
+  borderImage: "format3.webp",
   description: "White background with royal blue floral corners and border."
 };
 
@@ -79,7 +79,7 @@ window.BIODATA_TEMPLATES["4"] = {
   key: "teal-gold",
   displayName: "Format 4 – Teal & Gold (Cambria)",
   primaryColor: "#facc15",
-  borderImage: "format4.jpg",
+  borderImage: "format4.webp",
   description: "Deep teal textured background with elegant gold ornaments."
 };
 
@@ -88,7 +88,7 @@ window.BIODATA_TEMPLATES["5"] = {
   key: "gold-classic",
   displayName: "Format 5 – Classic Gold Border",
   primaryColor: "#b45309",
-  borderImage: "format5.jpg",
+  borderImage: "format5.webp",
   description: "Minimal white layout with elegant golden frame and serif typography."
 };
 window.BIODATA_TEMPLATES["5"] = {
@@ -96,7 +96,7 @@ window.BIODATA_TEMPLATES["5"] = {
   key: "gold-classic",
   displayName: "Format 5 – Classic Gold Border",
   primaryColor: "#b45309",
-  borderImage: "format5.jpg",
+  borderImage: "format5.webp",
   description: "Minimal white layout with elegant golden frame and serif typography."
 };
 
@@ -105,7 +105,7 @@ window.BIODATA_TEMPLATES["6"] = {
   key: "islamic-floral-bismillah",
   displayName: "Format 6 – Islamic Floral (Bismillah)",
   primaryColor: "#b45309",
-  borderImage: "format6.jpg",
+  borderImage: "format6.webp",
   description: "Soft floral frame with Bismillah on top; all biodata content starts below the calligraphy."
 };
 
@@ -114,6 +114,6 @@ window.BIODATA_TEMPLATES["7"] = {
   key: "gold-bismillah-frame",
   displayName: "Format 7 – Golden Bismillah Frame",
   primaryColor: "#a07017",
-  borderImage: "format7.jpg",
+  borderImage: "format7.webp",
   description: "Golden calligraphy frame with content starting only below the Bismillah."
 };
